@@ -128,86 +128,256 @@ dns:
     - "*.mcdn.bilivideo.cn"
     - +.media.dssott.com
 proxies:
-  - name: Hurricane3
-    server: 104.16.53.111
+  - name: HZ ID 02
+    server: 172.67.5.14
     port: 443
     type: vmess
-    uuid: 27d5ccd0-ac77-47c6-9f5f-c061f7540da9
+    uuid: 649cc7d3-1846-4eec-8796-35d09f97bc22
     alterId: 0
     cipher: auto
     tls: true
     skip-cert-verify: true
-    servername: hurricane3.nextvpn.cc
+    servername: vmess-id04.gproxy.pro
     network: ws
     ws-opts:
-      path: /worryfree
+      path: /vmess-ws
       headers:
-        Host: hurricane3.nextvpn.cc
+        Host: vmess-id04.gproxy.pro
     udp: true
-  - name: Udpgw
-    server: 104.18.36.140
+  - name: TROJAN CH SG 01
+    server: 172.67.5.14
     port: 443
     type: trojan
-    password: 8b234bb0-aab5-11ed-bdef-1239d0255272
+    password: ed3b277e-6d16-4050-bfc2-9cb4b1b30e0e
     skip-cert-verify: true
-    sni: trojan2.udpgw.com
+    sni: tro-sg02.gproxy.pro
     network: ws
     ws-opts:
-      path: /howdy
+      path: /trojan-ws
       headers:
-        Host: trojan2.udpgw.com
+        Host: tro-sg02.gproxy.pro
     udp: true
-  - name: SG-3
-    server: 104.18.36.140
+  - name: Tro MBC SG 03
+    server: 172.67.5.14
     port: 443
     type: trojan
-    password: 3410ab50-aab6-11ed-914a-1239d0255272
+    password: 719b07db-1f4c-4218-8c5a-8e991042099f
     skip-cert-verify: true
-    sni: sg-3.test3.net
+    sni: tro-sg03.gproxy.pro
     network: ws
     ws-opts:
-      path: /howdy
+      path: /trojan-ws
       headers:
-        Host: sg-3.test3.net
+        Host: tro-sg03.gproxy.pro
     udp: true
-  - name: SG-2
-    server: 104.18.36.140
+  - name: TROJAN GS SG 01
+    server: 172.67.5.14
     port: 443
     type: trojan
-    password: 58628ee0-aab6-11ed-bee5-1239d0255272
+    password: 129af750-09f1-40bb-9a64-d5df74038ace
     skip-cert-verify: true
-    sni: sg-2.test3.net
+    sni: tro-sg04.gproxy.pro
     network: ws
     ws-opts:
-      path: /howdy
+      path: /trojan
       headers:
-        Host: sg-2.test3.net
+        Host: tro-sg04.gproxy.pro
     udp: true
-  - name: Biznet1
-    server: 104.16.53.111
+  - name: AMP ID 01
+    server: 172.67.5.14
     port: 443
     type: vmess
-    uuid: 9f8dd441-27b6-4d85-848a-9225a784091d
+    uuid: 1e38b50f-910d-4c7f-aaf0-55f3e47aa761
     alterId: 0
     cipher: auto
     tls: true
     skip-cert-verify: true
-    servername: biznet1.nextvpn.cc
+    servername: vmess-id01.gproxy.pro
     network: ws
     ws-opts:
-      path: /worryfree
+      path: /vmess-ws
       headers:
-        Host: biznet1.nextvpn.cc
+        Host: vmess-id01.gproxy.pro
+    udp: true
+  - name: BN ID 01
+    server: 172.67.5.14
+    port: 443
+    type: vmess
+    uuid: 60792418-cacb-4cad-9c65-009ffd504104
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: vmess-id06.gproxy.pro
+    network: ws
+    ws-opts:
+      path: /vmess-ws
+      headers:
+        Host: vmess-id06.gproxy.pro
+    udp: true
+  - name: CTN ID 01
+    server: 172.67.5.14
+    port: 443
+    type: vmess
+    uuid: b6f24b53-e8ff-4395-abf6-98d2ec280792
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: vmess-id05.gproxy.pro
+    network: ws
+    ws-opts:
+      path: /vmess-ws
+      headers:
+        Host: vmess-id05.gproxy.pro
+    udp: true
+  - name: NNS ID 01
+    server: 172.67.5.14
+    port: 443
+    type: vmess
+    uuid: b49e2f38-f3ab-4c81-b807-9ff02ba9a372
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: vmess-id07.gproxy.pro
+    network: ws
+    ws-opts:
+      path: /vmess-ws
+      headers:
+        Host: vmess-id07.gproxy.pro
+    udp: true
+  - name: NNS ID 02
+    server: 172.67.5.14
+    port: 443
+    type: vmess
+    uuid: 430e7896-f3f8-4e84-b563-f27dfd767c7f
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: vmess-id08.gproxy.pro
+    network: ws
+    ws-opts:
+      path: /vmess-ws
+      headers:
+        Host: vmess-id08.gproxy.pro
+    udp: true
+  - name: RCH ID 01
+    server: 172.67.5.14
+    port: 443
+    type: vmess
+    uuid: c60068e2-6278-46e2-8435-50cd4a985c50
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: vmess-id05.gproxy.pro
+    network: ws
+    ws-opts:
+      path: /vmess-ws
+      headers:
+        Host: vmess-id05.gproxy.pro
+    udp: true
+  - name: RM ID 01
+    server: 172.67.5.14
+    port: 443
+    type: vmess
+    uuid: 01d9e94c-885f-43a1-a0b1-aa05c42bc35d
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: vmess-id07.gproxy.pro
+    network: ws
+    ws-opts:
+      path: /vmess-ws
+      headers:
+        Host: vmess-id07.gproxy.pro
+    udp: true
+  - name: IDK-1
+    server: 172.67.5.14
+    port: 443
+    type: vmess
+    uuid: 0297a588-40b3-4557-ba88-9317a2d949cb
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: to.idk1.workers.dev
+    network: ws
+    ws-opts:
+      path: /vmess
+      headers:
+        Host: to.idk1.workers.dev
+    udp: true
+  - name: UMS ID 01
+    server: 172.67.5.14
+    port: 443
+    type: vmess
+    uuid: d78bd4da-3168-4833-888e-57373b06fd5c
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: vmess-id11.gproxy.pro
+    network: ws
+    ws-opts:
+      path: /vmess-ws
+      headers:
+        Host: vmess-id11.gproxy.pro
+    udp: true
+  - name: GS SG 01
+    server: 172.67.5.14
+    port: 443
+    type: vmess
+    uuid: d902b035-c2e0-4cec-b3a7-8302f2495cca
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: vmess-sg04.gproxy.pro
+    network: ws
+    ws-opts:
+      path: /vmess-ws
+      headers:
+        Host: vmess-sg04.gproxy.pro
+    udp: true
+  - name: ID3 Tifa
+    server: 172.67.5.14
+    port: 443
+    type: vmess
+    uuid: 9a4c415e-252b-4d09-b42e-d87e719b8c31
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: id3.servercepat.net
+    network: ws
+    ws-opts:
+      path: /vmess
+      headers:
+        Host: id3.servercepat.net
     udp: true
 proxy-groups:
   - name: FASTSSH-SSHKIT-HOWDY
     type: select
     proxies:
-      - Hurricane3
-      - Udpgw
-      - SG-3
-      - SG-2
-      - Biznet1
+      - HZ ID 02
+      - TROJAN CH SG 01
+      - Tro MBC SG 03
+      - TROJAN GS SG 01
+      - AMP ID 01
+      - BN ID 01      
+      - CTN ID 01    
+      - NNS ID 01     
+      - NNS ID 02      
+      - RCH ID 01   
+      - RM ID 01     
+      - IDK-1  
+      - UMS ID 01  
+      - GS SG 01  
+      - ID3 Tifa                                  
       - DIRECT
 rules:
   - MATCH,FASTSSH-SSHKIT-HOWDY

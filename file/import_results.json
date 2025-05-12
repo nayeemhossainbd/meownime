@@ -1,1 +1,26 @@
-test
+[
+  {
+    "id": "1324",
+    "fileNames": "Gotham (testing)",
+    "artists": "ELAST",
+    "driveFileNames": "Test E'LAST - Gotham.mp3",
+    "albums": "5th Mini Album [Versus]",
+    "genres": "Dance",
+    "years": "2025",
+    "duration": "03:24",
+    "driveLink": "https://drive.google.com/file/d/1bYVy6P1zqpxkHul02CPXck0ZIsvms3yY/view?usp=drivesdk",
+    "lyrics": "────୨ E'LAST - Gotham  ৎ────\n( ๑ ˃̵ᴗ˂̵)و ♡ [Romanization]\n...liriknya...\n( ๑ ˃̵ᴗ˂̵)و ♡ [Hangeul]\n..liriknya.."
+  },
+  {
+    "id": "1326",
+    "fileNames": "Test TEA (testing)",
+    "artists": "VVS2",
+    "driveFileNames": "Test VVS - TEA.mp3",
+    "albums": "TEA",
+    "genres": "Dance",
+    "years": "2025",
+    "duration": "2:41",
+    "driveLink": "https://drive.google.com/file/d/1LO7-pQUKK59aqiegzSqQtxt1UTwDhbo2/view?usp=drivesdk",
+    "lyrics": "Lyrics Not Available (˚ ˃̣̣̥⌓˂̣̣̥ ), request on the metrolagu.wapkiz.mobi forum for mp3 files with lyrics or add them yourself, search for lyrics from Google (❀❛ ֊ ❛„)♡"
+  }
+]

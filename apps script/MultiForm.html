@@ -1,0 +1,796 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>[VERCEL] Import MP3 with ID3v2 Tags to Google Drive</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 10px;
+        box-sizing: border-box;
+        transition: background-color 0.3s, color 0.3s;
+      }
+      body.light {
+        background-color: #f5f5f5;
+        color: #333;
+      }
+      body.dark {
+        background-color: #1a1a1a;
+        color: #e0e0e0;
+      }
+      h2 {
+        text-align: center;
+        font-size: 1.5em;
+        margin-bottom: 15px;
+      }
+      .form-container {
+        background: inherit;
+        padding: 15px;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        width: 100%;
+        max-width: 800px;
+        margin: 0 auto;
+        transition: background-color 0.3s;
+      }
+      body.light .form-container {
+        background: #fff;
+      }
+      body.dark .form-container {
+        background: #2a2a2a;
+      }
+      label {
+        font-weight: bold;
+        display: block;
+        margin-bottom: 5px;
+        font-size: 0.9em;
+      }
+      body.dark label {
+        color: #bbb;
+      }
+      textarea {
+        width: 100%;
+        padding: 8px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        resize: vertical;
+        box-sizing: border-box;
+        font-size: 0.9em;
+        transition: border-color 0.3s, background-color 0.3s;
+      }
+      body.dark textarea {
+        border-color: #555;
+        background-color: #333;
+        color: #e0e0e0;
+      }
+      textarea[name="lyrics"] {
+        resize: both;
+        min-height: 200px;
+        line-height: 1.5;
+      }
+      textarea[name="lyrics"] .song-title,
+      textarea[name="lyrics"] .section-title {
+        display: block;
+        text-align: center;
+        text-transform: uppercase;
+        font-weight: bold;
+        margin: 10px 0;
+      }
+      input[type="file"] {
+        margin-bottom: 10px;
+        font-size: 0.9em;
+      }
+      .button-container {
+        display: flex;
+        gap: 10px;
+        margin-top: 10px;
+      }
+      input[type="button"], button {
+        background-color: #4CAF50;
+        color: white;
+        padding: 8px 15px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 0.9em;
+        flex: 1;
+      }
+      input[type="button"]:hover, button:hover {
+        background-color: #45a049;
+      }
+      #clearButton {
+        background-color: #f44336;
+      }
+      #clearButton:hover {
+        background-color: #da190b;
+      }
+      #downloadButton {
+        background-color: #2196F3;
+      }
+      #downloadButton:hover {
+        background-color: #1976D2;
+      }
+      #progressBar {
+        margin-top: 15px;
+        width: 100%;
+        height: 20px;
+        background: #e0e0e0;
+        border-radius: 10px;
+        overflow: hidden;
+        transition: background-color 0.3s;
+      }
+      body.dark #progressBar {
+        background: #444;
+      }
+      #progress {
+        height: 100%;
+        background: linear-gradient(to right, #4CAF50, #81C784);
+        width: 0%;
+        transition: width 0.5s ease-in-out;
+      }
+      #progressText {
+        margin-top: 8px;
+        font-size: 0.85em;
+        text-align: center;
+      }
+      #result {
+        margin-top: 15px;
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        max-height: 200px;
+        overflow-y: auto;
+        white-space: pre-wrap;
+        font-size: 0.85em;
+        transition: border-color 0.3s, background-color 0.3s;
+      }
+      body.light #result {
+        background: #fff;
+      }
+      body.dark #result {
+        background: #333;
+        border-color: #555;
+        color: #e0e0e0;
+      }
+      .radio-container {
+        margin-top: 5px;
+        display: flex;
+        gap: 15px;
+      }
+      .radio-container label {
+        font-weight: normal;
+        display: inline;
+        margin-bottom: 0;
+      }
+      .collapsible {
+        background-color: #777;
+        color: white;
+        cursor: pointer;
+        padding: 10px;
+        width: 100%;
+        border: none;
+        text-align: left;
+        outline: none;
+        font-size: 0.9em;
+        border-radius: 4px;
+        margin-top: 10px;
+      }
+      .collapsible:hover {
+        background-color: #555;
+      }
+      body.dark .collapsible {
+        background-color: #555;
+      }
+      body.dark .collapsible:hover {
+        background-color: #666;
+      }
+      .content {
+        display: none;
+        overflow: hidden;
+        padding: 0 10px;
+      }
+      #themeToggle {
+        position: fixed;
+        top: 10px;
+        right: 10px;
+        padding: 8px 15px;
+        background-color: #777;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+      #themeToggle:hover {
+        background-color: #555;
+      }
+      .toggle-container {
+        margin-top: 10px;
+        font-size: 0.9em;
+      }
+      .toggle-container label {
+        font-weight: normal;
+        display: inline;
+        margin-left: 5px;
+      }
+      @media (max-width: 600px) {
+        body { padding: 5px; }
+        h2 { font-size: 1.2em; margin-bottom: 10px; }
+        .form-container { padding: 10px; }
+        label { font-size: 0.8em; }
+        textarea { padding: 6px; font-size: 0.8em; }
+        input[type="file"] { font-size: 0.8em; }
+        .button-container { flex-direction: column; gap: 5px; }
+        input[type="button"], button { padding: 8px; font-size: 0.8em; }
+        #progressBar { height: 15px; margin-top: 10px; }
+        #progressText { font-size: 0.75em; }
+        #result { max-height: 150px; padding: 8px; font-size: 0.75em; }
+        .radio-container { flex-direction: column; gap: 5px; }
+        .toggle-container { font-size: 0.8em; }
+        #themeToggle { top: 5px; right: 5px; padding: 6px 10px; font-size: 0.8em; }
+        textarea[name="lyrics"] { min-height: 150px; }
+      }
+    </style>
+  </head>
+  <body class="light">
+    <button id="themeToggle" onclick="toggleTheme()">Dark Mode</button>
+    <h2>[VERCEL] Import MP3 with ID3v2 Tags to Google Drive</h2>
+    <div class="form-container">
+      <form id="myForm">
+        <label>Upload File (CSV/JSON, optional):</label>
+        <input type="file" id="fileInput" accept=".csv,.json" onchange="handleFileUpload()">
+        <label id="coverUrlsLabel">Cover Image URL (optional, one per line):</label>
+        <textarea name="coverUrls" rows="3"></textarea>
+        <label id="urlsLabel">MP3 URLs (one per line):</label>
+        <textarea name="urls" rows="5" oninput="adjustInputs()"></textarea>
+        <label id="watermarkLabel">Watermark Text</label>
+        <div class="radio-container">
+          <div>
+            <input type="radio" id="metrolagu" name="watermarkOption" value="metrolagu.wapkiz.mobi" onchange="updateWatermark()">
+            <label for="metrolagu">Metrolagu</label>
+          </div>
+          <div>
+            <input type="radio" id="wallkpop" name="watermarkOption" value="wallkpop.wapkiz.com" onchange="updateWatermark()">
+            <label for="wallkpop">Wallkpop</label>
+          </div>
+          <div>
+            <input type="radio" id="meownime" name="watermarkOption" value="meownime.wapkiz.com" onchange="updateWatermark()">
+            <label for="meownime">Meownime</label>
+          </div>
+        </div>        
+        <textarea name="watermark" rows="1"></textarea>
+        <label id="driveFileNamesLabel">File Name in Google Drive (optional, one per line):</label>
+        <textarea name="driveFileNames" rows="3"></textarea>
+        <label id="fileNamesLabel">Title (optional, one per line):</label>
+        <textarea name="fileNames" rows="3"></textarea>
+        <label id="artistsLabel">Artist (optional, one per line):</label>
+        <textarea name="artists" rows="3"></textarea>
+        <label id="albumsLabel">Album (optional, one per line):</label>
+        <textarea name="albums" rows="3"></textarea>
+        <label id="genresLabel">Genre (optional, one per line):</label>
+        <textarea name="genres" rows="3"></textarea>
+        <label id="yearsLabel">Year (optional, one per line):</label>
+        <textarea name="years" rows="3"></textarea>
+        <label id="composersLabel">Composer (optional, one per line):</label>
+        <textarea name="composers" rows="3"></textarea>
+        <label id="commentsLabel">Comment (optional, one per line):</label>
+        <textarea name="comments" rows="3"></textarea>
+        
+        <button type="button" class="collapsible">Show Advanced Fields</button>
+        <div class="content">
+          <label id="tracksLabel">Track Number (optional, one per line):</label>
+          <textarea name="tracks" rows="3"></textarea>
+          <label id="publishersLabel">Publisher (optional, one per line):</label>
+          <textarea name="publishers" rows="3"></textarea>
+          <label id="discsLabel">Disc Number (optional, one per line):</label>
+          <textarea name="discs" rows="3"></textarea>
+          <label id="isrcsLabel">ISRC (optional, one per line):</label>
+          <textarea name="isrcs" rows="3"></textarea>
+          <label id="encodedBysLabel">Encoded By (optional, one per line):</label>
+          <textarea name="encodedBys" rows="3"></textarea>
+          <label id="lyricistsLabel">Lyricist (optional, one per line):</label>
+          <textarea name="lyricists" rows="3"></textarea>
+          <label id="mediaTypesLabel">Media Type (optional, one per line):</label>
+          <textarea name="mediaTypes" rows="3"></textarea>
+          <label id="keysLabel">Initial Key (optional, one per line):</label>
+          <textarea name="keys" rows="3"></textarea>
+          <label id="lengthsLabel">Length in ms (optional, one per line):</label>
+          <textarea name="lengths" rows="3"></textarea>
+          <label id="copyrightUrlsLabel">Copyright URL (optional, one per line, e.g., legal info link):</label>
+          <textarea name="copyrightUrls" rows="3"></textarea>
+          <label id="copyrightsLabel">Copyright (optional, one per line):</label>
+          <textarea name="copyrights" rows="3"></textarea>
+          <label id="urlsTagLabel">URL (optional, one per line, e.g., source or related link):</label>
+          <textarea name="urlsTag" rows="3"></textarea>
+        </div>
+
+        <label id="languagesLabel">Language (optional, one per line, e.g., kor, eng):</label>
+        <textarea name="languages" rows="3"></textarea>
+        <label id="lyricsLabel">Lyrics (optional, separate songs with blank line):</label>
+        <textarea name="lyrics" rows="10"></textarea>
+        <div class="toggle-container">
+          <input type="checkbox" id="autoClear" onchange="toggleAutoClear()">
+          <label for="autoClear">Auto-clear history after download</label>
+        </div>
+        <div class="button-container">
+          <input type="button" value="Start Import" onclick="submitForm()">
+          <input type="button" id="clearButton" value="Clear History" onclick="clearHistory()">
+          <button id="downloadButton" style="display: none;" onclick="downloadResults()">Download Results as JSON</button>
+        </div>
+      </form>
+    </div>
+    <div id="progressBar">
+      <div id="progress"></div>
+    </div>
+    <div id="progressText"></div>
+    <div id="result"></div>
+
+    <script>
+      let importedData = [];
+      let isProcessing = false;
+      let progressInterval = null;
+
+      function stripHtmlTags(html) {
+        try {
+          html = html.replace(/<br\s*\/?>/gi, '\n');
+          html = html.replace(/<b>\s*Lyric\s+([^<]+)\s*<\/b>/gi, '────୨ $1 ৎ────');
+          html = html.replace(/<b>\s*Romanization\s*<\/b>/gi, '( ๑ ˃̵ᴗ˂̵)و ♡ [Romanization]');
+          html = html.replace(/<b>\s*Hangeul\s*<\/b>/gi, '( ๑ ˃̵ᴗ˂̵)و ♡ [Hangeul]');
+          html = html.replace(/<\/?[^>]+(>|$)/g, '');
+          html = html.replace(/\n\s*\n/g, '\n').trim();
+          return html;
+        } catch (err) {
+          console.error('Error in stripHtmlTags:', err);
+          return html;
+        }
+      }
+
+      function handleFileUpload() {
+        var fileInput = document.getElementById('fileInput');
+        var file = fileInput.files[0];
+        if (!file) return;
+
+        var reader = new FileReader();
+        reader.onload = function(e) {
+          var content = e.target.result;
+          var extension = file.name.split('.').pop().toLowerCase();
+          var data;
+
+          try {
+            if (extension === 'csv') {
+              data = parseCSV(content);
+            } else if (extension === 'json') {
+              data = JSON.parse(content);
+              const defaultLyrics = "Lyrics Not Available (˚ ˃̣̣̥⌓˂̣̣̥ ), request on the metrolagu.wapkiz.mobi forum for mp3 files with lyrics or add them yourself, search for lyrics from Google (❀❛ ֊ ❛„)♡";
+              importedData = data.map(item => ({
+                ...item,
+                originalLyrics: item.lyrics || defaultLyrics, // Preserve raw HTML
+                lyrics: item.lyrics && item.lyrics.trim() !== '' ? stripHtmlTags(item.lyrics) : defaultLyrics // Stripped for UI
+              }));
+            } else {
+              alert('Unsupported file format. Please upload a CSV or JSON file.');
+              return;
+            }
+
+            fillTextAreas(importedData);
+            adjustInputs();
+          } catch (err) {
+            alert('Error parsing file: ' + err.message);
+            document.getElementById('result').innerHTML = 'Error parsing file: ' + err.message;
+          }
+        };
+        reader.readAsText(file);
+      }
+
+      function parseCSV(content) {
+        var lines = content.split('\n').filter(line => line.trim());
+        var headers = lines[0].split(',').map(h => h.trim());
+        var data = [];
+
+        for (var i = 1; i < lines.length; i++) {
+          var values = lines[i].split(',').map(v => v.trim());
+          var obj = {};
+          headers.forEach((header, index) => {
+            obj[header] = values[index] || '';
+          });
+          data.push(obj);
+        }
+        return data;
+      }
+
+      function fillTextAreas(data) {
+        var fields = [
+          'urls', 'fileNames', 'artists', 'albums', 'genres', 'years', 'composers',
+          'comments', 'coverUrls', 'driveFileNames', 'tracks', 'publishers', 'discs',
+          'isrcs', 'encodedBys', 'lyricists', 'mediaTypes', 'keys', 'lengths',
+          'copyrights', 'languages', 'urlsTag', 'copyrightUrls'
+        ];
+
+        fields.forEach(field => {
+          var textarea = document.getElementsByName(field)[0];
+          if (textarea) {
+            var values = data.map(item => item[field] || '');
+            textarea.value = values.join('\n');
+          }
+        });
+
+        var lyricsTextarea = document.getElementsByName('lyrics')[0];
+        if (lyricsTextarea) {
+          var lyricsValues = data.map(item => item.lyrics || '');
+          lyricsTextarea.value = lyricsValues.join('\n\n');
+        }
+      }
+
+      function adjustInputs() {
+        var urlsTextarea = document.getElementsByName("urls")[0];
+        var urls = urlsTextarea.value.split('\n').filter(url => url.trim() !== '');
+        var lineCount = urls.length || 1;
+
+        document.getElementById("urlsLabel").innerHTML = `MP3 URLs (one per line: ${lineCount} line${lineCount > 1 ? 's' : ''}):`;
+
+        var languages = [];
+        urls.forEach(function(url) {
+          if (url.includes('matikiri.net')) {
+            languages.push("kor");
+          } else if (url.includes('ilkpop.c1e72c0a41a77d3cfeb09b99b8910193.r2.cloudflarestorage.com')) {
+            languages.push("kor");
+          } else if (url.includes('tumpuklagu.wapkiz.mobi')) {
+            languages.push("ind");
+          } else if (url.includes('osanime.com')) {
+            languages.push("jpn");
+          } else {
+            languages.push("");
+          }
+        });
+        document.getElementsByName("languages")[0].value = languages.join('\n');
+
+        var fields = [
+          'coverUrls', 'driveFileNames', 'fileNames', 'artists', 'albums', 'genres',
+          'years', 'composers', 'comments', 'tracks', 'publishers', 'discs', 'isrcs',
+          'encodedBys', 'lyricists', 'mediaTypes', 'keys', 'lengths', 'copyrightUrls',
+          'copyrights', 'languages', 'urlsTag'
+        ];
+
+        var preserveFields = ['driveFileNames', 'fileNames', 'artists'];
+        var repeatFields = ['composers'];
+
+        fields.forEach(function(fieldName) {
+          var textarea = document.getElementsByName(fieldName)[0];
+          var currentLines = textarea.value.split('\n');
+          var newValue = currentLines.slice();
+
+          if (repeatFields.includes(fieldName)) {
+            if (currentLines.length > 0 && currentLines[0].trim() !== "") {
+              newValue = Array(lineCount).fill(currentLines[0]);
+            } else {
+              newValue = Array(lineCount).fill("");
+            }
+          } else if (preserveFields.includes(fieldName)) {
+            while (newValue.length < lineCount) {
+              newValue.push("");
+            }
+            if (newValue.length > lineCount) {
+              newValue = newValue.slice(0, lineCount);
+            }
+          } else {
+            while (newValue.length < lineCount) {
+              newValue.push("");
+            }
+            if (newValue.length > lineCount) {
+              newValue = newValue.slice(0, lineCount);
+            }
+          }
+
+          textarea.value = newValue.join('\n');
+
+          var labelId = fieldName + 'Label';
+          var labelElement = document.getElementById(labelId);
+          if (labelElement) {
+            var baseLabel = labelElement.innerHTML.split(' (optional')[0];
+            labelElement.innerHTML = `${baseLabel} (optional, one per line: ${lineCount} line${lineCount > 1 ? 's' : ''}):`;
+          }
+        });
+
+        var defaultLyrics = "Lyrics Not Available, request on the metrolagu.wapkiz.mobi forum for mp3 files with lyrics or add them yourself, search for lyrics from Google";
+        var lyricsTextarea = document.getElementsByName("lyrics")[0];
+        var currentLyrics = lyricsTextarea.value.split('\n\n').map(lyric => lyric.trim());
+        var newLyrics = currentLyrics.slice();
+        while (newLyrics.length < lineCount) {
+          newLyrics.push(defaultLyrics);
+        }
+        if (newLyrics.length > lineCount) {
+          newLyrics = newLyrics.slice(0, lineCount);
+        }
+        newLyrics = newLyrics.map(lyric => lyric.trim() === '' ? defaultLyrics : lyric);
+        lyricsTextarea.value = newLyrics.join('\n\n');
+
+        document.getElementById("lyricsLabel").innerHTML = `Lyrics (optional, separate songs with blank line: ${lineCount} line${lineCount > 1 ? 's' : ''}):`;
+        document.getElementById("watermarkLabel").innerHTML = `Watermark Text (optional, leave blank for default: ${lineCount === 1 ? '1 line' : lineCount + ' lines'}):`;
+      }
+
+      function updateWatermark() {
+        var selectedOption = document.querySelector('input[name="watermarkOption"]:checked');
+        var watermarkTextarea = document.getElementsByName("watermark")[0];
+        if (selectedOption) {
+          watermarkTextarea.value = selectedOption.value;
+        }
+      }
+
+      function submitForm() {
+        if (isProcessing) {
+          alert('Import is already in progress. Please wait until it completes.');
+          return;
+        }
+
+        isProcessing = true;
+        var formData = {
+          id: importedData.map(item => item.id || '').join('\n'),
+          urls: document.getElementsByName("urls")[0].value,
+          fileNames: document.getElementsByName("fileNames")[0].value,
+          artists: document.getElementsByName("artists")[0].value,
+          albums: document.getElementsByName("albums")[0].value,
+          genres: document.getElementsByName("genres")[0].value,
+          years: document.getElementsByName("years")[0].value,
+          composers: document.getElementsByName("composers")[0].value,
+          comments: document.getElementsByName("comments")[0].value,
+          coverUrls: document.getElementsByName("coverUrls")[0].value,
+          driveFileNames: document.getElementsByName("driveFileNames")[0].value,
+          tracks: document.getElementsByName("tracks")[0].value,
+          publishers: document.getElementsByName("publishers")[0].value,
+          discs: document.getElementsByName("discs")[0].value,
+          isrcs: document.getElementsByName("isrcs")[0].value,
+          encodedBys: document.getElementsByName("encodedBys")[0].value,
+          lyricists: document.getElementsByName("lyricists")[0].value,
+          mediaTypes: document.getElementsByName("mediaTypes")[0].value,
+          keys: document.getElementsByName("keys")[0].value,
+          lengths: document.getElementsByName("lengths")[0].value,
+          copyrights: document.getElementsByName("copyrights")[0].value,
+          languages: document.getElementsByName("languages")[0].value,
+          lyrics: document.getElementsByName("lyrics")[0].value,
+          urlsTag: document.getElementsByName("urlsTag")[0].value,
+          copyrightUrls: document.getElementsByName("copyrightUrls")[0].value,
+          watermark: document.getElementsByName("watermark")[0].value,
+          duration: importedData.map(item => item.duration || '').join('\n'),
+          importedData: JSON.stringify(importedData) // Pass client-side importedData
+        };
+
+        document.getElementById("result").innerHTML = "Starting import process...";
+        document.getElementById("progress").style.width = "0%";
+        document.getElementById("progressText").innerHTML = "Progress: 0% (0 files processed)";
+        document.getElementById("downloadButton").style.display = "none";
+
+        google.script.run
+          .withSuccessHandler(function(message) {
+            document.getElementById("result").innerHTML = message;
+            startProgressPolling();
+          })
+          .withFailureHandler(function(err) {
+            isProcessing = false;
+            clearInterval(progressInterval);
+            document.getElementById("result").innerHTML = "Error starting import: " + err.message;
+          })
+          .startImport(formData);
+      }
+
+      function startProgressPolling() {
+        if (progressInterval) clearInterval(progressInterval);
+        progressInterval = setInterval(updateProgress, 1000);
+      }
+
+      function updateProgress() {
+        google.script.run
+          .withSuccessHandler(function(status) {
+            var progress = status.progress;
+            var results = status.results;
+            var isRunning = status.isRunning;
+            var totalFiles = status.totalFiles;
+            var currentIndex = status.currentIndex;
+
+            // Update progress bar
+            document.getElementById("progress").style.width = progress + "%";
+            // Show "Processing file X of Y" for each file, update immediately
+            if (totalFiles > 0) {
+              if (isRunning || currentIndex < totalFiles) {
+                document.getElementById("progressText").innerHTML = 
+                  `Processing file ${Math.min(currentIndex + 1, totalFiles)} of ${totalFiles} (${progress}%)`;
+              } else {
+                document.getElementById("progressText").innerHTML = 
+                  `Completed: ${currentIndex} of ${totalFiles} files processed (${progress}%)`;
+              }
+            } else {
+              document.getElementById("progressText").innerHTML = "Progress: 0% (0 files processed)";
+            }
+            document.getElementById("result").innerHTML = results.join('\n');
+
+            if (!isRunning && currentIndex >= totalFiles && totalFiles > 0) {
+              isProcessing = false;
+              clearInterval(progressInterval);
+              document.getElementById("downloadButton").style.display = "block";
+            }
+          })
+          .withFailureHandler(function(err) {
+            isProcessing = false;
+            clearInterval(progressInterval);
+            document.getElementById("result").innerHTML = "Error updating progress: " + err.message;
+          })
+          .getProgress();
+      }
+
+      function clearHistory() {
+        google.script.run
+          .withSuccessHandler(function(message) {
+            adjustInputs();
+            document.getElementById("result").innerHTML = "";
+            document.getElementById("progress").style.width = "0%";
+            document.getElementById("progressText").innerHTML = "";
+            document.getElementById("downloadButton").style.display = "none";
+            var textareas = document.getElementsByTagName("textarea");
+            for (var i = 0; i < textareas.length; i++) {
+              textareas[i].value = "";
+            }
+            importedData = [];
+            isProcessing = false;
+            clearInterval(progressInterval);
+            document.getElementById("result").innerHTML = message;
+          })
+          .withFailureHandler(function(err) {
+            document.getElementById("result").innerHTML = "Error clearing history: " + err.message;
+          })
+          .clearHistory();
+      }
+
+      function restoreHistory() {
+        google.script.run
+          .withSuccessHandler(function(history) {
+            if (history.results && history.results.length > 0) {
+              document.getElementById("result").innerHTML = history.results.join('\n');
+              document.getElementById("progress").style.width = history.progress + "%";
+              if (history.totalFiles > 0) {
+                if (history.isRunning || history.currentIndex < history.totalFiles) {
+                  document.getElementById("progressText").innerHTML = 
+                    `Processing file ${Math.min(history.currentIndex + 1, history.totalFiles)} of ${history.totalFiles} (${history.progress}%)`;
+                } else {
+                  document.getElementById("progressText").innerHTML = 
+                    `Completed: ${history.currentIndex} of ${history.totalFiles} files processed (${history.progress}%)`;
+                }
+              } else {
+                document.getElementById("progressText").innerHTML = "Progress: 0% (0 files processed)";
+              }
+              if (!history.isRunning && history.currentIndex >= history.totalFiles && history.totalFiles > 0) {
+                document.getElementById("downloadButton").style.display = "block";
+              }
+            }
+            if (history.importedData && history.importedData.length > 0) {
+              importedData = history.importedData;
+              fillTextAreas(importedData);
+              adjustInputs();
+            }
+          })
+          .withFailureHandler(function(err) {
+            document.getElementById("result").innerHTML = "Error restoring history: " + err.message;
+          })
+          .getHistory();
+      }
+
+      function toggleAutoClear() {
+        var autoClear = document.getElementById("autoClear").checked;
+        localStorage.setItem("autoClear", autoClear);
+      }
+
+      function downloadResults() {
+        try {
+          const scrollX = window.scrollX;
+          const scrollY = window.scrollY;
+
+          const resultText = document.getElementById("result").innerHTML;
+          const resultLines = resultText.split('\n').filter(line => line.trim().startsWith('Berhasil:'));
+
+          if (resultLines.length === 0) {
+            alert('No successful import results to download.');
+            return;
+          }
+
+          const jsonArray = [];
+          resultLines.forEach((line, index) => {
+            try {
+              const match = line.match(/Berhasil: (.+?) - Link: (.+?) \(Progres: .+?\)/);
+              if (!match) return;
+
+              const [, fileName, driveLink] = match;
+              const importedItem = importedData[index] || {};
+
+              const resultObj = {
+                id: importedItem.id || '',
+                fileNames: importedItem.fileNames || '',
+                artists: importedItem.artists || '',
+                driveFileNames: fileName,
+                albums: importedItem.albums || '',
+                genres: importedItem.genres || '',
+                years: importedItem.years || '',
+                duration: importedItem.duration || '',
+                driveLink: driveLink,
+                lyrics: importedItem.originalLyrics || importedItem.lyrics || ''
+              };
+
+              jsonArray.push(resultObj);
+            } catch (err) {
+              console.error('Error parsing result line:', line, err);
+            }
+          });
+
+          if (jsonArray.length === 0) {
+            alert('Failed to parse import results.');
+            return;
+          }
+
+          const jsonStr = JSON.stringify(jsonArray, null, 2);
+          const blob = new Blob([jsonStr], { type: 'application/json' });
+          const url = URL.createObjectURL(blob);
+          const a = document.createElement('a');
+          a.href = url;
+          a.download = 'import_results.json';
+          document.body.appendChild(a);
+          a.click();
+          document.body.removeChild(a);
+          URL.revokeObjectURL(url);
+
+          window.scrollTo(scrollX, scrollY);
+          document.getElementById("result").innerHTML = resultText;
+
+          if (document.getElementById("autoClear").checked) {
+            clearHistory();
+          }
+        } catch (err) {
+          document.getElementById("result").innerHTML = "Error downloading results: " + err.message;
+          console.error('Download error:', err);
+        }
+      }
+
+      function toggleTheme() {
+        var body = document.body;
+        var button = document.getElementById("themeToggle");
+        if (body.classList.contains("light")) {
+          body.classList.remove("light");
+          body.classList.add("dark");
+          button.textContent = "Light Mode";
+          localStorage.setItem("theme", "dark");
+        } else {
+          body.classList.remove("dark");
+          body.classList.add("light");
+          button.textContent = "Dark Mode";
+          localStorage.setItem("theme", "light");
+        }
+      }
+
+      document.addEventListener('DOMContentLoaded', function() {
+        var coll = document.getElementsByClassName("collapsible");
+        for (var i = 0; i < coll.length; i++) {
+          coll[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var content = this.nextElementSibling;
+            if (content.style.display === "block") {
+              content.style.display = "none";
+              this.textContent = "Show Advanced Fields";
+            } else {
+              content.style.display = "block";
+              this.textContent = "Hide Advanced Fields";
+            }
+          });
+        }
+
+        var savedTheme = localStorage.getItem("theme");
+        if (savedTheme === "dark") {
+          document.body.classList.remove("light");
+          document.body.classList.add("dark");
+          document.getElementById("themeToggle").textContent = "Light Mode";
+        }
+
+        var autoClear = localStorage.getItem("autoClear") === "true";
+        document.getElementById("autoClear").checked = autoClear;
+
+        adjustInputs();
+        restoreHistory();
+      });
+    </script>
+  <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'93ea745feb9812d9',t:'MTc0NzA1ODU1NC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>

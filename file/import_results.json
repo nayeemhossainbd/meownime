@@ -1,15 +1,41 @@
 [
   {
-    "id": "1326",
-    "fileNames": "titlenya",
-    "artists": "Testartist",
-    "driveFileNames": "Testartist - TEA.mp3",
-    "albums": "Testalbum",
-    "genres": "Dance",
+    "id": "1717",
+    "fileNames": "SHION",
+    "artists": "Murasaki Shion",
+    "driveFileNames": "Murasaki Shion - SHION [Theme Song hololive IDOL PROJECT].mp3",
+    "albums": "hololive IDOL PROJECT Theme Song",
+    "genres": "VTuber",
     "years": "2025",
-    "duration": "2:41",
-    "driveLink": "https://drive.google.com/file/d/1brKBOoutkFEJGC8iZqqUIHoadZejWZEP/view?usp=drivesdk",
+    "duration": "3:41",
+    "driveLink": "https://drive.google.com/file/d/1SkQ2IT_mwVmkMfPqZu5uk5KhH3PxsVdx/view?usp=drivesdk",
     "lyrics": "Lyrics Not Available (˚ ˃̣̣̥⌓˂̣̣̥ ), request on the metrolagu.wapkiz.mobi forum for mp3 files with lyrics or add them yourself, search for lyrics from Google (❀❛ ֊ ❛„)♡",
-    "coverUrl": "https://rawcdn.githack.com/caraaink/meownime/29a5a88a1c00b31af68dc81103667f5a276710d2/cover/dance/Testartist_titlenya.jpg"
+    "coverUrl": "https://rawcdn.githack.com/caraaink/meownime/b9da5b737762da94749a02a253cea121d58de700/cover/vtuber/Murasaki_Shion_SHION.jpg"
+  },
+  {
+    "id": "1718",
+    "fileNames": "On the Journey",
+    "artists": "HOYO-MiX, Vision Wei & NEA",
+    "driveFileNames": "HOYO-MiX, Vision Wei & NEA - On the Journey [Theme Song Honkai: Star Rail Two-Year Anniversary Special Animation].mp3",
+    "albums": "Honkai: Star Rail Two-Year Anniversary Special Animation Theme Song",
+    "genres": "Game",
+    "years": "2025",
+    "duration": "2:36",
+    "driveLink": "https://drive.google.com/file/d/1u3-Q5ZFSI341Xeb9YcKL2s3E5aysAKqo/view?usp=drivesdk",
+    "lyrics": "Lyrics Not Available (˚ ˃̣̣̥⌓˂̣̣̥ ), request on the metrolagu.wapkiz.mobi forum for mp3 files with lyrics or add them yourself, search for lyrics from Google (❀❛ ֊ ❛„)♡",
+    "coverUrl": "https://rawcdn.githack.com/caraaink/meownime/ddcf228455b06efbce968155a2be6eae500acbc8/cover/game/HOYO_MiX_Vision_Wei__NEA_On_the_Journey.jpg"
+  },
+  {
+    "id": "1719",
+    "fileNames": "Goodbye forcast",
+    "artists": "Appare Hinata & Amagai Ruka",
+    "driveFileNames": "Appare Hinata & Amagai Ruka - Goodbye forcast [Theme Song WeatherPlanet].mp3",
+    "albums": "WeatherPlanet Theme Song",
+    "genres": "VTuber",
+    "years": "2025",
+    "duration": "3:21",
+    "driveLink": "https://drive.google.com/file/d/1Y7GLo5WgZfLVpOqhpAGLtVdjjGCj2-Hp/view?usp=drivesdk",
+    "lyrics": "Lyrics Not Available (˚ ˃̣̣̥⌓˂̣̣̥ ), request on the metrolagu.wapkiz.mobi forum for mp3 files with lyrics or add them yourself, search for lyrics from Google (❀❛ ֊ ❛„)♡",
+    "coverUrl": "https://rawcdn.githack.com/caraaink/meownime/a3745cc691da5b600de79b722dcf1787d90d365a/cover/vtuber/Appare_Hinata__Amagai_Ruka_Goodbye_forcast.jpg"
   }
 ]

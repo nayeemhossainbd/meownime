@@ -1,54 +1,15 @@
 [
   {
-    "id": "1340",
-    "fileNames": "Selimut Hangat",
-    "artists": "testing Mala Agatha",
-    "driveFileNames": "testing Mala Agatha - Selimut Hangat.mp3",
-    "albums": "Selimut Hangat",
-    "genres": "Pop",
-    "years": "2025",
-    "duration": "4:16",
-    "driveLink": "https://drive.google.com/file/d/1_RCYXoM7CRMBhrMowRdOFfP6ISbB90qM/view?usp=drivesdk",
-    "lyrics": "<center><b>Lyric E'LAST - Gotham </b>\n        <br>\n        <br>\n\n<b>Romanization</b><br><br>...liriknya...<br><br><b>Hangeul</b><br>..liriknya..</center>",
-    "coverUrl": "https://rawcdn.githack.com/caraaink/meownime/6227a0e70df33bdd6087e0b4a480ee7c30550297/cover/pop/testing_Mala_Agatha_Selimut_Hangat.jpg"
-  },
-  {
     "id": "1326",
-    "fileNames": "MAISIE",
-    "artists": "testing Cö shu Nie feat. HYDE",
-    "driveFileNames": "testing Cö shu Nie feat. HYDE - MAISIE [Opening Kuroshitsuji: Midori no Majo-hen].mp3",
-    "albums": "Kuroshitsuji: Midori no Majo-hen OP",
-    "genres": "Anime",
-    "years": "2025",
-    "duration": "2:41",
-    "driveLink": "https://drive.google.com/file/d/1YkFAEQkHYBc7GER2LmM-eVSsI51EyB_K/view?usp=drivesdk",
-    "lyrics": "Lyrics Not Available (˚ ˃̣̣̥⌓˂̣̣̥ ), request on the metrolagu.wapkiz.mobi forum for mp3 files with lyrics or add them yourself, search for lyrics from Google (❀❛ ֊ ❛„)♡",
-    "coverUrl": "https://rawcdn.githack.com/caraaink/meownime/93113a4add07fc9336c9cf7af471e411ee340713/cover/anime/testing_C%C3%B6_shu_Nie_feat_HYDE_MAISIE.jpg"
-  },
-  {
-    "id": "1324",
-    "fileNames": "Gotham (testing)",
-    "artists": "testing ELAST",
-    "driveFileNames": "Testing E'LAST - Gotham.mp3",
-    "albums": "5th Mini Album [Versus]",
-    "genres": "Dance",
-    "years": "2025",
-    "duration": "03:24",
-    "driveLink": "https://drive.google.com/file/d/1LqBIthmeSZ9DwDaiY8ElznxR6CsytuB0/view?usp=drivesdk",
-    "lyrics": "<center><b>Lyric E'LAST &amp; Emi - Gotham </b>\n        <br>\n        <br>\n\n<b>Romanization</b><br><br>...liriknya...<br><br><b>Hangeul</b><br>..liriknya..</center>",
-    "coverUrl": "https://rawcdn.githack.com/caraaink/meownime/45c0d6d3b09b650fe829cc09e8bc04d2f0ecdded/cover/dance/testing_ELAST_Gotham_testing.jpg"
-  },
-  {
-    "id": "1326",
-    "fileNames": "TEA",
-    "artists": "VVS2",
-    "driveFileNames": "VVS - TEA.mp3",
-    "albums": "TEA",
+    "fileNames": "titlenya",
+    "artists": "Testartist",
+    "driveFileNames": "Testartist - TEA.mp3",
+    "albums": "Testalbum",
     "genres": "Dance",
     "years": "2025",
     "duration": "2:41",
-    "driveLink": "https://drive.google.com/file/d/1glX1UNHrErlEPvk0gjU6l0yJXdiQCZ_n/view?usp=drivesdk",
+    "driveLink": "https://drive.google.com/file/d/1brKBOoutkFEJGC8iZqqUIHoadZejWZEP/view?usp=drivesdk",
     "lyrics": "Lyrics Not Available (˚ ˃̣̣̥⌓˂̣̣̥ ), request on the metrolagu.wapkiz.mobi forum for mp3 files with lyrics or add them yourself, search for lyrics from Google (❀❛ ֊ ❛„)♡",
-    "coverUrl": "https://rawcdn.githack.com/caraaink/meownime/4e60fc9e3b0bdaa0b2f35296134e0a691f8cd8cf/cover/dance/VVS2_TEA.jpg"
+    "coverUrl": "https://rawcdn.githack.com/caraaink/meownime/29a5a88a1c00b31af68dc81103667f5a276710d2/cover/dance/Testartist_titlenya.jpg"
   }
 ]

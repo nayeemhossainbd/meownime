@@ -1,18 +1,64 @@
-document.addEventListener("DOMContentLoaded", function () {
-    const container = document.getElementById("saved-list");
-    const data = JSON.parse(localStorage.getItem("bookmarkedArticles") || "[]");
+    const articles = document.querySelectorAll('article');
+    const bookmarkedList = document.getElementById('bookmarked-list');
 
-    if (data.length === 0) {
-      container.innerHTML = "<p>Tidak ada bookmark.</p>";
-      return;
+    function getBookmarks() {
+      return JSON.parse(localStorage.getItem('bookmarkedArticles') || '[]');
     }
 
-    const ul = document.createElement("ul");
-    data.forEach(item => {
-      const li = document.createElement("li");
-      li.innerHTML = `<a href="https://meownime-wapkiz-com.wapkiz.sbs/editpage-music/3958/maneki-kecak/kagami-no-naka-kara/">test</a>`;
-      ul.appendChild(li);
+    function saveBookmarks(data) {
+      localStorage.setItem('bookmarkedArticles', JSON.stringify(data));
+    }
+
+    function isBookmarked(link) {
+      const bookmarks = getBookmarks();
+      return bookmarks.some(item => item.link === link);
+    }
+
+    function toggleBookmark(article, icon) {
+      const title = article.dataset.title;
+      const link = article.dataset.link;
+
+      let bookmarks = getBookmarks();
+      const index = bookmarks.findIndex(item => item.link === link);
+
+      if (index !== -1) {
+        bookmarks.splice(index, 1);
+        icon.textContent = '🤍';
+      } else {
+        bookmarks.push({ title, link });
+        icon.textContent = '❤️';
+      }
+
+      saveBookmarks(bookmarks);
+      renderBookmarkedList();
+    }
+
+    function renderBookmarkedList() {
+      const bookmarks = getBookmarks();
+      bookmarkedList.innerHTML = '';
+      bookmarks.forEach(({ title, link }) => {
+        const li = document.createElement('li');
+        const a = document.createElement('a');
+        a.href = link;
+        a.target = "_blank";
+        a.textContent = title;
+        li.appendChild(a);
+        bookmarkedList.appendChild(li);
+      });
+    }
+
+    // Setup event & icon
+    articles.forEach(article => {
+      const link = article.dataset.link;
+      const icon = article.querySelector('.love');
+
+      if (isBookmarked(link)) {
+        icon.textContent = '❤️';
+      }
+
+      icon.addEventListener('click', () => {
+        toggleBookmark(article, icon);
+      });
     });
 
-    container.appendChild(ul);
-  });
+    renderBookmarkedList();

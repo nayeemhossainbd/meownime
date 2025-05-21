@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const ul = document.createElement("ul");
     data.forEach(item => {
       const li = document.createElement("li");
-      li.innerHTML = `<a href="${item.link}">${item.title}</a>`;
+      li.innerHTML = `<a href="https://meownime-wapkiz-com.wapkiz.sbs/editpage-music/3958/maneki-kecak/kagami-no-naka-kara/">test</a>`;
       ul.appendChild(li);
     });
 

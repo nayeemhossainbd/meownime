@@ -1,64 +1,98 @@
-    const articles = document.querySelectorAll('article');
+    const articlesContainer = document.getElementById('articles');
     const bookmarkedList = document.getElementById('bookmarked-list');
+    const form = document.getElementById('article-form');
+    const titleInput = document.getElementById('title');
+    const contentInput = document.getElementById('content');
+
+    function getArticles() {
+      return JSON.parse(localStorage.getItem('allArticles') || '[]');
+    }
+
+    function saveArticles(articles) {
+      localStorage.setItem('allArticles', JSON.stringify(articles));
+    }
 
     function getBookmarks() {
       return JSON.parse(localStorage.getItem('bookmarkedArticles') || '[]');
     }
 
-    function saveBookmarks(data) {
-      localStorage.setItem('bookmarkedArticles', JSON.stringify(data));
+    function saveBookmarks(ids) {
+      localStorage.setItem('bookmarkedArticles', JSON.stringify(ids));
     }
 
-    function isBookmarked(link) {
+    function renderArticles() {
+      const articles = getArticles();
       const bookmarks = getBookmarks();
-      return bookmarks.some(item => item.link === link);
-    }
+      articlesContainer.innerHTML = '';
 
-    function toggleBookmark(article, icon) {
-      const title = article.dataset.title;
-      const link = article.dataset.link;
+      articles.forEach(article => {
+        const div = document.createElement('div');
+        div.className = 'article';
+        div.dataset.id = article.id;
 
-      let bookmarks = getBookmarks();
-      const index = bookmarks.findIndex(item => item.link === link);
+        const title = document.createElement('h3');
+        title.textContent = article.title;
 
-      if (index !== -1) {
-        bookmarks.splice(index, 1);
-        icon.textContent = '🤍';
-      } else {
-        bookmarks.push({ title, link });
-        icon.textContent = '❤️';
-      }
+        const content = document.createElement('p');
+        content.textContent = article.content;
 
-      saveBookmarks(bookmarks);
-      renderBookmarkedList();
+        const love = document.createElement('span');
+        love.className = 'love';
+        love.textContent = bookmarks.includes(article.id) ? '❤️' : '🤍';
+        love.onclick = () => toggleBookmark(article.id, love);
+
+        div.appendChild(title);
+        div.appendChild(content);
+        div.appendChild(love);
+        articlesContainer.appendChild(div);
+      });
     }
 
     function renderBookmarkedList() {
       const bookmarks = getBookmarks();
+      const articles = getArticles();
       bookmarkedList.innerHTML = '';
-      bookmarks.forEach(({ title, link }) => {
+      articles.filter(a => bookmarks.includes(a.id)).forEach(a => {
         const li = document.createElement('li');
-        const a = document.createElement('a');
-        a.href = link;
-        a.target = "_blank";
-        a.textContent = title;
-        li.appendChild(a);
+        li.textContent = a.title;
         bookmarkedList.appendChild(li);
       });
     }
 
-    // Setup event & icon
-    articles.forEach(article => {
-      const link = article.dataset.link;
-      const icon = article.querySelector('.love');
-
-      if (isBookmarked(link)) {
-        icon.textContent = '❤️';
+    function toggleBookmark(id, loveElement) {
+      let bookmarks = getBookmarks();
+      if (bookmarks.includes(id)) {
+        bookmarks = bookmarks.filter(bid => bid !== id);
+        loveElement.textContent = '🤍';
+      } else {
+        bookmarks.push(id);
+        loveElement.textContent = '❤️';
       }
+      saveBookmarks(bookmarks);
+      renderBookmarkedList();
+    }
 
-      icon.addEventListener('click', () => {
-        toggleBookmark(article, icon);
-      });
-    });
+    form.onsubmit = function (e) {
+      e.preventDefault();
+      const title = titleInput.value.trim();
+      const content = contentInput.value.trim();
 
+      if (!title || !content) return;
+
+      const articles = getArticles();
+      const newArticle = {
+        id: Date.now().toString(),
+        title,
+        content
+      };
+
+      articles.push(newArticle);
+      saveArticles(articles);
+      form.reset();
+      renderArticles();
+      renderBookmarkedList();
+    };
+
+    // Inisialisasi
+    renderArticles();
     renderBookmarkedList();

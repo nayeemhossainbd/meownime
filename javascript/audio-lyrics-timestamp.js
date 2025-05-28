@@ -47,7 +47,7 @@ audio.addEventListener('timeupdate', () => {
   } else {
     lyricsContainer.textContent = '';
     lyricsContainer.classList.remove('active');
-    debugContainer.textContent = `Time: ${currentTime.toFixed(2)}s, No lyric`;
+    debugContainer.textContent = `Time: ${currentTime.toFixed(2)}s, No lyric [time_stamp]`;
   }
 });
 

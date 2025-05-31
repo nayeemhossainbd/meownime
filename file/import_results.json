@@ -8,9 +8,37 @@
     "genres": "VTuber",
     "years": "2025",
     "duration": "3:15",
-    "driveLink": "https://drive.google.com/file/d/1jHlWhS5v_WAJQ5Ysp5kJum8joOST_hgT/view?usp=drivesdk",
+    "driveLink": "https://drive.google.com/file/d/1X3Nap_ufWed0wGuihnZZQCt7RtIg7BkH/view?usp=drivesdk",
     "lyrics": "Lyrics Not Available (˚ ˃̣̣̥⌓˂̣̣̥ ), request on the metrolagu.wapkiz.mobi forum for mp3 files with lyrics or add them yourself, search for lyrics from Google (❀❛ ֊ ❛„)♡",
-    "coverUrl": "https://cdn.jsdelivr.net/gh/caraaink/meownime@2d3c717846f4a233c5c3feedf9c08b57d05b57cc/cover/vtuber/MaiR_Denpa_Tensei_Alternative.jpg",
+    "coverUrl": "https://cdn.jsdelivr.net/gh/caraaink/meownime@ac7f9fedc46650532695385d8f10f0dfb458b5ae/cover/vtuber/MaiR_Denpa_Tensei_Alternative.jpg",
+    "bitrate": "320"
+  },
+  {
+    "id": "2270",
+    "fileNames": "Baby Blue",
+    "artists": "Hiiragi Yuka",
+    "driveFileNames": "Hiiragi Yuka - Baby Blue.mp3",
+    "albums": "Baby Blue",
+    "genres": "VTuber",
+    "years": "2025",
+    "duration": "2:45",
+    "driveLink": "https://drive.google.com/file/d/1JgrwtsFIQZK1usq73T4L5S0ZxFoAdWed/view?usp=drivesdk",
+    "lyrics": "Lyrics Not Available (˚ ˃̣̣̥⌓˂̣̣̥ ), request on the metrolagu.wapkiz.mobi forum for mp3 files with lyrics or add them yourself, search for lyrics from Google (❀❛ ֊ ❛„)♡",
+    "coverUrl": "https://cdn.jsdelivr.net/gh/caraaink/meownime@1b0552c19e694e6e1a20bf20a1ff30a9542b393f/cover/vtuber/Hiiragi_Yuka_Baby_Blue.jpg",
+    "bitrate": "320"
+  },
+  {
+    "id": "2271",
+    "fileNames": "Baby Blue",
+    "artists": "Hiiragi Yuka",
+    "driveFileNames": "Hiiragi Yuka - Baby Blue.mp3",
+    "albums": "Baby Blue",
+    "genres": "VTuber",
+    "years": "2025",
+    "duration": "2:45",
+    "driveLink": "https://drive.google.com/file/d/1M1GN2Imjk2nZrLICVLfaXYuHfU7qXU7z/view?usp=drivesdk",
+    "lyrics": "Lyrics Not Available (˚ ˃̣̣̥⌓˂̣̣̥ ), request on the metrolagu.wapkiz.mobi forum for mp3 files with lyrics or add them yourself, search for lyrics from Google (❀❛ ֊ ❛„)♡",
+    "coverUrl": "https://cdn.jsdelivr.net/gh/caraaink/meownime@e2b3f158ca0e71635e7c544402e6b26976783a22/cover/vtuber/Hiiragi_Yuka_Baby_Blue.jpg",
     "bitrate": "320"
   }
 ]

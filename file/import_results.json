@@ -1,3 +1,33 @@
 {
-  "isi": []
+  "isi": [
+    {
+      "id": "2283",
+      "fileNames": "Self Service",
+      "artists": "Amane Kanata",
+      "driveFileNames": "Amane Kanata - Self Service [Theme Song hololive IDOL PROJECT].mp3",
+      "albums": "hololive IDOL PROJECT Theme Song",
+      "genres": "VTuber",
+      "years": "2025",
+      "duration": "2:39",
+      "driveLink": "https://drive.google.com/file/d/1zH7tMvJ_K9J1t2bCl5YrghMqEg_AeEyb/view?usp=drivesdk",
+      "lyrics": "Lyrics Not Available (˚ ˃̣̣̥⌓˂̣̣̥ ), request on the metrolagu.wapkiz.mobi forum for mp3 files with lyrics or add them yourself, search for lyrics from Google (❀❛ ֊ ❛„)♡",
+      "coverUrl": "https://cdn.jsdelivr.net/gh/caraaink/meownime@10933b21382a3ac2ba532f3fb4945c1c8bb2a59c/cover/vtuber/Amane_Kanata_Self_Service.jpg",
+      "bitrate_original": "320",
+      "url_original": "https://drive.google.com/file/d/1zH7tMvJ_K9J1t2bCl5YrghMqEg_AeEyb/view?usp=drivesdk",
+      "size_original": "6.4 MB",
+      "bitrate_320": "320",
+      "url_320": "https://drive.google.com/file/d/1zH7tMvJ_K9J1t2bCl5YrghMqEg_AeEyb/view?usp=drivesdk",
+      "size_320": "6.4 MB",
+      "driveFileNames_320": "Amane Kanata - Self Service [Theme Song hololive IDOL PROJECT]-[320k].mp3",
+      "bitrate_192": "192",
+      "url_192": "https://drive.google.com/file/d/1DY89efGS49XWjXEaye7vkY8k_Q9sqtPj/view?usp=drivesdk",
+      "size_192": "3.9 MB",
+      "driveFileNames_192": "Amane Kanata - Self Service [Theme Song hololive IDOL PROJECT]-[192k].mp3",
+      "bitrate_128": "128",
+      "url_128": "https://drive.google.com/file/d/19EKamhLR-3LF5xE8K_xmyjyF26ACoL8c/view?usp=drivesdk",
+      "size_128": "2.7 MB",
+      "driveFileNames_128": "Amane Kanata - Self Service [Theme Song hololive IDOL PROJECT]-[128k].mp3",
+      "lyrics_timestamp": "Lyrics Not Available (˚ ˃̣̣̥⌓˂̣̣̥ ), request on the metrolagu.wapkiz.mobi forum for mp3 files with lyrics or add them yourself, search for lyrics from Google (❀❛ ֊ ❛„)♡"
+    }
+  ]
 }

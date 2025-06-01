@@ -1,30 +1,3 @@
 {
-  "isi": [
-    {
-      "id": "2276",
-      "fileNames": "Chandelier (Rock Version)",
-      "artists": "Nightcore",
-      "driveFileNames": "Nightcore - Chandelier (Rock Version).mp3",
-      "albums": "Rock",
-      "genres": "test",
-      "years": "2025",
-      "duration": "03:13",
-      "driveLink": "https://drive.google.com/file/d/1BpKPRp8TD040dDi8wVW_P0BoFFoFugCh/view?usp=drivesdk",
-      "lyrics": "Lyrics Not Available (˚ ˃̣̣̥⌓˂̣̣̥ ), request on the metrolagu.wapkiz.mobi forum for mp3 files with lyrics or add them yourself, search for lyrics from Google (❀❛ ֊ ❛„)♡",
-      "coverUrl": "https://cdn.jsdelivr.net/gh/caraaink/meownime@86b5f6473a6849b479bebc0af1b5be6283341651/cover/test/Nightcore_Chandelier_Rock_Version.jpg",
-      "bitrate_original": "320",
-      "url_original": "https://drive.google.com/file/d/1BpKPRp8TD040dDi8wVW_P0BoFFoFugCh/view?usp=drivesdk",
-      "size_original": "7.7 MB",
-      "bitrate_320": "320",
-      "bitrate_192": "192",
-      "bitrate_128": "128",
-      "url_320": "https://drive.google.com/file/d/1BpKPRp8TD040dDi8wVW_P0BoFFoFugCh/view?usp=drivesdk",
-      "url_192": "https://drive.google.com/file/d/14hY5713SNyvbjky-60VkD7LG4Huh9p_1/view?usp=drivesdk",
-      "url_128": "https://drive.google.com/file/d/1wtkNQtIeY_c0S6GcDnd4eKfIujedRwmu/view?usp=drivesdk",
-      "size_320": "7.7 MB",
-      "size_192": "4.7 MB",
-      "size_128": "3.2 MB",
-      "lyrics_timestamp": "Lyrics Not Available (˚ ˃̣̣̥⌓˂̣̣̥ ), request on the metrolagu.wapkiz.mobi forum for mp3 files with lyrics or add them yourself, search for lyrics from Google (❀❛ ֊ ❛„)♡"
-    }
-  ]
+  "isi": []
 }

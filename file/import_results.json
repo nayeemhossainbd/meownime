@@ -1,3 +1,33 @@
 {
-  "isi": []
+  "isi": [
+    {
+      "id": "2290",
+      "fileNames": "Kita Usahakan Lagi",
+      "artists": "Silvy Kumalasari",
+      "driveFileNames": "Silvy Kumalasari - Kita Usahakan Lagi.mp3",
+      "albums": "Kita Usahakan Lagi",
+      "genres": "Dangdut & Koplo",
+      "years": "2025",
+      "duration": "6:40",
+      "driveLink": "https://drive.google.com/file/d/1g9s9v6GrPGNK8shHCFvla6LZrJFKBBa2/view?usp=drivesdk",
+      "lyrics": "Lyrics Not Available (˚ ˃̣̣̥⌓˂̣̣̥ ), request on the metrolagu.wapkiz.mobi forum for mp3 files with lyrics or add them yourself, search for lyrics from Google (❀❛ ֊ ❛„)♡",
+      "coverUrl": "https://cdn.jsdelivr.net/gh/caraaink/meownime@8993a804e4e4ed03b28f30c77eb2c2ab4b755365/cover/dangdut & koplo/Silvy_Kumalasari_Kita_Usahakan_Lagi.jpg",
+      "bitrate_original": "122",
+      "url_original": "https://drive.google.com/file/d/1g9s9v6GrPGNK8shHCFvla6LZrJFKBBa2/view?usp=drivesdk",
+      "size_original": "6.0 MB",
+      "bitrate_320": "320",
+      "url_320": "https://drive.google.com/file/d/1CPGfPafDiePGc2tn7x9loRR-YhnxWNWJ/view?usp=drivesdk",
+      "size_320": "15.4 MB",
+      "driveFileNames_320": "Silvy Kumalasari - Kita Usahakan Lagi-[320k].mp3",
+      "bitrate_192": "192",
+      "url_192": "https://drive.google.com/file/d/184HYQNDb6IU8NpKaV8g8sIMEAnnPbpt3/view?usp=drivesdk",
+      "size_192": "9.3 MB",
+      "driveFileNames_192": "Silvy Kumalasari - Kita Usahakan Lagi-[192k].mp3",
+      "bitrate_128": "128",
+      "url_128": "https://drive.google.com/file/d/1cAk3iOnb722gfIK7n1gOy2kdT-4A7TtL/view?usp=drivesdk",
+      "size_128": "6.2 MB",
+      "driveFileNames_128": "Silvy Kumalasari - Kita Usahakan Lagi-[128k].mp3",
+      "lyrics_timestamp": "Lyrics Not Available (˚ ˃̣̣̥⌓˂̣̣̥ ), request on the metrolagu.wapkiz.mobi forum for mp3 files with lyrics or add them yourself, search for lyrics from Google (❀❛ ֊ ❛„)♡"
+    }
+  ]
 }

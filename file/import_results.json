@@ -1,3 +1,33 @@
 {
-  "isi": []
+  "isi": [
+    {
+      "id": "2294",
+      "fileNames": "Aku Cah Kerjo",
+      "artists": "Denny Caknan",
+      "driveFileNames": "Denny Caknan - Aku Cah Kerjo.mp3",
+      "albums": "Aku Cah Kerjo - DC Musik",
+      "genres": "Dangdut & Koplo",
+      "years": "2025",
+      "duration": "6:34",
+      "driveLink": "https://drive.google.com/file/d/1Qn-OEUQZuFt_Qv5MrZm7lZ4okK4vzmG0/view?usp=drivesdk",
+      "lyrics": "Lyrics Not Available (˚ ˃̣̣̥⌓˂̣̣̥ ), request on the metrolagu.wapkiz.mobi forum for mp3 files with lyrics or add them yourself, search for lyrics from Google (❀❛ ֊ ❛„)♡",
+      "coverUrl": "https://cdn.jsdelivr.net/gh/caraaink/meownime@b0278ac991bda674dea3b38fc3cbf704e0fa13f8/cover/dangdut & koplo/Denny_Caknan_Aku_Cah_Kerjo.jpg",
+      "bitrate_original": "132",
+      "url_original": "https://drive.google.com/file/d/1Qn-OEUQZuFt_Qv5MrZm7lZ4okK4vzmG0/view?usp=drivesdk",
+      "size_original": "6.3 MB",
+      "bitrate_320": "320",
+      "url_320": "https://drive.google.com/file/d/1qQFcr7L9XWMEye7DIXcQHsK_UudivDZu/view?usp=drivesdk",
+      "size_320": "15.1 MB",
+      "driveFileNames_320": "Denny Caknan - Aku Cah Kerjo-[320k].mp3",
+      "bitrate_192": "192",
+      "url_192": "https://drive.google.com/file/d/16NOgxSWIMLETnCCn6i68XoJJxW0v23bN/view?usp=drivesdk",
+      "size_192": "9.1 MB",
+      "driveFileNames_192": "Denny Caknan - Aku Cah Kerjo-[192k].mp3",
+      "bitrate_128": "128",
+      "url_128": "https://drive.google.com/file/d/1kQu-UG9Afc0BjYoakResP6q1rRS2JO_8/view?usp=drivesdk",
+      "size_128": "6.1 MB",
+      "driveFileNames_128": "Denny Caknan - Aku Cah Kerjo-[128k].mp3",
+      "lyrics_timestamp": "Lyrics Not Available (˚ ˃̣̣̥⌓˂̣̣̥ ), request on the metrolagu.wapkiz.mobi forum for mp3 files with lyrics or add them yourself, search for lyrics from Google (❀❛ ֊ ❛„)♡"
+    }
+  ]
 }

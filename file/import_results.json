@@ -1,38 +1,86 @@
-{
-  "isi": [
-    {
-      "id": "2765",
-      "fileNames": "Hollow",
-      "artists": "Stray Kids",
-      "driveFileNames": "Stray Kids - Hollow.mp3",
-      "albums": "Hollow",
-      "genres": "Dance",
-      "years": "2025",
-      "duration": "3:29",
-      "driveLink": "https://drive.google.com/file/d/1VeLHYY_DOQMR9AmPxa_PpdUAf7ul2YnT/view?usp=drivesdk",
-      "lyrics": "Lyrics Not Available (˚ ˃̣̣̥⌓˂̣̣̥ ), request on the metrolagu.wapkiz.mobi forum for mp3 files with lyrics or add them yourself, search for lyrics from Google (❀❛ ֊ ❛„)♡",
-      "coverUrl": "https://cdn.jsdelivr.net/gh/caraaink/meownime@e13bc88e3ea14c09f4041da424f0fd57cc886204/cover/dance/Stray_Kids_Hollow.jpg",
-      "bitrate_original": "133",
-      "url_original": "https://drive.google.com/file/d/1VeLHYY_DOQMR9AmPxa_PpdUAf7ul2YnT/view?usp=drivesdk",
-      "size_original": "3.5 MB",
-      "lyrics_timestamp": "Lyrics Not Available (˚ ˃̣̣̥⌓˂̣̣̥ ), request on the metrolagu.wapkiz.mobi forum for mp3 files with lyrics or add them yourself, search for lyrics from Google (❀❛ ֊ ❛„)♡"
-    },
-    {
-      "id": "2766",
-      "fileNames": "Floating Free",
-      "artists": "SOLAR",
-      "driveFileNames": "SOLAR - Floating Free.mp3",
-      "albums": "Floating Free",
-      "genres": "Dance",
-      "years": "2025",
-      "duration": "3:24",
-      "driveLink": "https://drive.google.com/file/d/1dxpdqKKCuCMiYqFk2_XgDyk8sOr4vHp2/view?usp=drivesdk",
-      "lyrics": "Lyrics Not Available (˚ ˃̣̣̥⌓˂̣̣̥ ), request on the metrolagu.wapkiz.mobi forum for mp3 files with lyrics or add them yourself, search for lyrics from Google (❀❛ ֊ ❛„)♡",
-      "coverUrl": "https://cdn.jsdelivr.net/gh/caraaink/meownime@62b7fb16c0ca8b288c24861534955c20c8d7da0c/cover/dance/SOLAR_Floating_Free.jpg",
-      "bitrate_original": "127",
-      "url_original": "https://drive.google.com/file/d/1dxpdqKKCuCMiYqFk2_XgDyk8sOr4vHp2/view?usp=drivesdk",
-      "size_original": "3.4 MB",
-      "lyrics_timestamp": "Lyrics Not Available (˚ ˃̣̣̥⌓˂̣̣̥ ), request on the metrolagu.wapkiz.mobi forum for mp3 files with lyrics or add them yourself, search for lyrics from Google (❀❛ ֊ ❛„)♡"
-    }
-  ]
-}
+[
+  {
+    "id": "2767",
+    "fileNames": "Find A Way",
+    "artists": "MIYAVI",
+    "driveFileNames": "MIYAVI - Find A Way [Ending Miru: Watashi no Mirai].mp3",
+    "albums": "Miru: Watashi no Mirai ED",
+    "genres": "Anime",
+    "years": "2025",
+    "duration": "3:42",
+    "driveLink": "https://drive.google.com/file/d/1Y-1M0YzCK3dso_Wxey-YTFaWN7MeYWCm/view?usp=drivesdk",
+    "lyrics": "Lyrics Not Available (˚ ˃̣̣̥⌓˂̣̣̥ ), request on the metrolagu.wapkiz.mobi forum for mp3 files with lyrics or add them yourself, search for lyrics from Google (❀❛ ֊ ❛„)♡",
+    "coverUrl": "https://cdn.jsdelivr.net/gh/caraaink/meownime@80337de9a166b506fb7759766e04743da65a3c9b/cover/anime/MIYAVI_Find_A_Way.jpg",
+    "bitrate": "320"
+  },
+  {
+    "id": "2768",
+    "fileNames": "Fantasy love",
+    "artists": "enomiya hanya",
+    "driveFileNames": "enomiya hanya - Fantasy love.mp3",
+    "albums": "Fantasy love",
+    "genres": "VTuber",
+    "years": "2024",
+    "duration": "4:31",
+    "driveLink": "https://drive.google.com/file/d/13d7P6Pw5h-tM0_O6ntBP1_qMlkeLv0dL/view?usp=drivesdk",
+    "lyrics": "Lyrics Not Available (˚ ˃̣̣̥⌓˂̣̣̥ ), request on the metrolagu.wapkiz.mobi forum for mp3 files with lyrics or add them yourself, search for lyrics from Google (❀❛ ֊ ❛„)♡",
+    "coverUrl": "https://cdn.jsdelivr.net/gh/caraaink/meownime@d07858f1e5200c1c60ad4abc76f1845b39a9c20a/cover/vtuber/enomiya_hanya_Fantasy_love.jpg",
+    "bitrate": "320"
+  },
+  {
+    "id": "2769",
+    "fileNames": "sleep in",
+    "artists": "Yua Manase",
+    "driveFileNames": "Yua Manase - sleep in.mp3",
+    "albums": "sleep in",
+    "genres": "VTuber",
+    "years": "2025",
+    "duration": "3:27",
+    "driveLink": "https://drive.google.com/file/d/1IjDFMz0aTecZphpcS_PTFIaTPHR4Ydii/view?usp=drivesdk",
+    "lyrics": "Lyrics Not Available (˚ ˃̣̣̥⌓˂̣̣̥ ), request on the metrolagu.wapkiz.mobi forum for mp3 files with lyrics or add them yourself, search for lyrics from Google (❀❛ ֊ ❛„)♡",
+    "coverUrl": "https://cdn.jsdelivr.net/gh/caraaink/meownime@7fe0a9b9d2f3c101efd93df50df9b2d0192622cc/cover/vtuber/Yua_Manase_sleep_in.jpg",
+    "bitrate": "320"
+  },
+  {
+    "id": "2770",
+    "fileNames": "Seimei no Rebels",
+    "artists": "Toramaru Ema (CV: Lico), Amemura Neri (CV: Noa), Shouji Momoko (CV: Mone)",
+    "driveFileNames": "Toramaru Ema (CV: Lico), Amemura Neri (CV: Noa), Shouji Momoko (CV: Mone) - Seimei no Rebels [Theme Song DENONBU].mp3",
+    "albums": "DENONBU Theme Song",
+    "genres": "J-Pop",
+    "years": "2025",
+    "duration": "4:01",
+    "driveLink": "https://drive.google.com/file/d/1Tfl4xGTy1aMt1pjJFigweeHfwt6H3raS/view?usp=drivesdk",
+    "lyrics": "Lyrics Not Available (˚ ˃̣̣̥⌓˂̣̣̥ ), request on the metrolagu.wapkiz.mobi forum for mp3 files with lyrics or add them yourself, search for lyrics from Google (❀❛ ֊ ❛„)♡",
+    "coverUrl": "https://cdn.jsdelivr.net/gh/caraaink/meownime@a9627e5bb01b1d83bf49300fa2233740446a998e/cover/j-pop/Toramaru_Ema_CV_Lico_Amemura_Neri_CV_Noa_Shouji_Momoko_CV_Mone_Seimei_no_Rebels.jpg",
+    "bitrate": "320"
+  },
+  {
+    "id": "2771",
+    "fileNames": "moi",
+    "artists": "Tama Kurogane (CV: Akina)",
+    "driveFileNames": "Tama Kurogane (CV: Akina) - moi [Theme Song DENONBU].mp3",
+    "albums": "DENONBU Theme Song",
+    "genres": "J-Pop",
+    "years": "2025",
+    "duration": "2:37",
+    "driveLink": "https://drive.google.com/file/d/1bqLfFTv9A59TzWQxihlxwWcWHbKeFK3J/view?usp=drivesdk",
+    "lyrics": "Lyrics Not Available (˚ ˃̣̣̥⌓˂̣̣̥ ), request on the metrolagu.wapkiz.mobi forum for mp3 files with lyrics or add them yourself, search for lyrics from Google (❀❛ ֊ ❛„)♡",
+    "coverUrl": "https://cdn.jsdelivr.net/gh/caraaink/meownime@c246c9a0dd3109da55e0ed8d14fd2ed90e18335f/cover/j-pop/Tama_Kurogane_CV_Akina_moi.jpg",
+    "bitrate": "320"
+  },
+  {
+    "id": "2772",
+    "fileNames": "1x",
+    "artists": "Kyoka",
+    "driveFileNames": "Kyoka - 1x.mp3",
+    "albums": "1x",
+    "genres": "VTuber / VSinger",
+    "years": "2025",
+    "duration": "3:43",
+    "driveLink": "https://drive.google.com/file/d/1fAfgA4P5DsbhVsL7VP2gZLe6wlpuFq9E/view?usp=drivesdk",
+    "lyrics": "Lyrics Not Available (˚ ˃̣̣̥⌓˂̣̣̥ ), request on the metrolagu.wapkiz.mobi forum for mp3 files with lyrics or add them yourself, search for lyrics from Google (❀❛ ֊ ❛„)♡",
+    "coverUrl": "https://cdn.jsdelivr.net/gh/caraaink/meownime@244c8453083837d2d83826ec83cd115f59189e4b/cover/vtuber / vsinger/Kyoka_1x.jpg",
+    "bitrate": "320"
+  }
+]

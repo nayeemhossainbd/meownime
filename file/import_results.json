@@ -1,3 +1,67 @@
 {
-  "isi": []
+  "isi": [
+    {
+      "id": "3275",
+      "fileNames": "Kimi no Kimochi ga Shiritai no!",
+      "artists": "Maiden Works",
+      "driveFileNames": "Maiden Works - Kimi no Kimochi ga Shiritai no! [Theme Song Vebop Project].mp3",
+      "albums": "Vebop Project Theme Song",
+      "genres": "VTuber",
+      "years": "2025",
+      "duration": "3:01",
+      "driveLink": "https://drive.google.com/file/d/1rGCfrIZb8VL94pLKfwYdOq7D1kYBf2qz/view?usp=drivesdk",
+      "lyrics": "Lyrics Not Available (˚ ˃̣̣̥⌓˂̣̣̥ ), request on the metrolagu.wapkiz.mobi forum for mp3 files with lyrics or add them yourself, search for lyrics from Google (❀❛ ֊ ❛„)♡",
+      "coverUrl": "https://cdn.jsdelivr.net/gh/caraaink/meownime@523607633a53d0692cd35df57b322ca3e8152814/cover/vtuber/Maiden_Works_Kimi_no_Kimochi_ga_Shiritai_no.jpg",
+      "bitrate_original": "320",
+      "url_original": "https://drive.google.com/file/d/1rGCfrIZb8VL94pLKfwYdOq7D1kYBf2qz/view?usp=drivesdk",
+      "size_original": "7.2 MB",
+      "bitrate_320": "320",
+      "url_320": "https://drive.google.com/file/d/1rGCfrIZb8VL94pLKfwYdOq7D1kYBf2qz/view?usp=drivesdk",
+      "size_320": "7.2 MB",
+      "driveFileNames_320": "Maiden Works - Kimi no Kimochi ga Shiritai no! [Theme Song Vebop Project].mp3",
+      "lyrics_timestamp": "Lyrics Not Available (˚ ˃̣̣̥⌓˂̣̣̥ ), request on the metrolagu.wapkiz.mobi forum for mp3 files with lyrics or add them yourself, search for lyrics from Google (❀❛ ֊ ❛„)♡"
+    },
+    {
+      "id": "3276",
+      "fileNames": "BURAI",
+      "artists": "mihalu",
+      "driveFileNames": "mihalu - BURAI.mp3",
+      "albums": "BURAI",
+      "genres": "J-Pop",
+      "years": "2025",
+      "duration": "3:44",
+      "driveLink": "https://drive.google.com/file/d/1V5tfH8Yv5sTLC5espvxN-l-0wqkMaJYF/view?usp=drivesdk",
+      "lyrics": "Lyrics Not Available (˚ ˃̣̣̥⌓˂̣̣̥ ), request on the metrolagu.wapkiz.mobi forum for mp3 files with lyrics or add them yourself, search for lyrics from Google (❀❛ ֊ ❛„)♡",
+      "coverUrl": "https://cdn.jsdelivr.net/gh/caraaink/meownime@ad448e61231bba56a46447ac27d0605237339622/cover/j-pop/mihalu_BURAI.jpg",
+      "bitrate_original": "320",
+      "url_original": "https://drive.google.com/file/d/1V5tfH8Yv5sTLC5espvxN-l-0wqkMaJYF/view?usp=drivesdk",
+      "size_original": "8.7 MB",
+      "bitrate_320": "320",
+      "url_320": "https://drive.google.com/file/d/1V5tfH8Yv5sTLC5espvxN-l-0wqkMaJYF/view?usp=drivesdk",
+      "size_320": "8.7 MB",
+      "driveFileNames_320": "mihalu - BURAI.mp3",
+      "lyrics_timestamp": "Lyrics Not Available (˚ ˃̣̣̥⌓˂̣̣̥ ), request on the metrolagu.wapkiz.mobi forum for mp3 files with lyrics or add them yourself, search for lyrics from Google (❀❛ ֊ ❛„)♡"
+    },
+    {
+      "id": "3277",
+      "fileNames": "「Haikei, Kizu darake no Anata e」",
+      "artists": "Aijiro Nagi",
+      "driveFileNames": "Aijiro Nagi - 「Haikei, Kizu darake no Anata e」 [Theme Song Asterism].mp3",
+      "albums": "Asterism Theme Song",
+      "genres": "VTuber / VSinger",
+      "years": "2025",
+      "duration": "4:48",
+      "driveLink": "https://drive.google.com/file/d/1FUQKeiO2G1uq36uF6oWhA2q8qCUX9FpJ/view?usp=drivesdk",
+      "lyrics": "Lyrics Not Available (˚ ˃̣̣̥⌓˂̣̣̥ ), request on the metrolagu.wapkiz.mobi forum for mp3 files with lyrics or add them yourself, search for lyrics from Google (❀❛ ֊ ❛„)♡",
+      "coverUrl": "https://cdn.jsdelivr.net/gh/caraaink/meownime@27548a990b093d91a76c9059e7f6f76f05db89dd/cover/vtuber / vsinger/Aijiro_Nagi_Haikei_Kizu_darake_no_Anata_e.jpg",
+      "bitrate_original": "320",
+      "url_original": "https://drive.google.com/file/d/1FUQKeiO2G1uq36uF6oWhA2q8qCUX9FpJ/view?usp=drivesdk",
+      "size_original": "11.2 MB",
+      "bitrate_320": "320",
+      "url_320": "https://drive.google.com/file/d/1FUQKeiO2G1uq36uF6oWhA2q8qCUX9FpJ/view?usp=drivesdk",
+      "size_320": "11.2 MB",
+      "driveFileNames_320": "Aijiro Nagi - 「Haikei, Kizu darake no Anata e」 [Theme Song Asterism].mp3",
+      "lyrics_timestamp": "Lyrics Not Available (˚ ˃̣̣̥⌓˂̣̣̥ ), request on the metrolagu.wapkiz.mobi forum for mp3 files with lyrics or add them yourself, search for lyrics from Google (❀❛ ֊ ❛„)♡"
+    }
+  ]
 }

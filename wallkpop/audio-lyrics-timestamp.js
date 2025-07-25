@@ -72,7 +72,6 @@ function testLyrics() {
   }
 }
 
-// Inject server switch dropdown menu after DOM loaded
 document.addEventListener("DOMContentLoaded", () => {
   const players = document.querySelectorAll(".plyr");
 
@@ -80,19 +79,22 @@ document.addEventListener("DOMContentLoaded", () => {
     const el = wrapper.querySelector("audio");
     const gdrive = el?.dataset.gdrive;
     const wallkpop = el?.dataset.wallkpop;
+    const metrolagu = el?.dataset.metrolagu;
 
     const menu = wrapper.querySelector('.plyr__menu__container [role="menu"]');
-    if (menu && gdrive && wallkpop) {
+    if (menu && gdrive && (wallkpop || metrolagu)) {
       const customItem = document.createElement('div');
       customItem.className = 'plyr__menu__item';
       customItem.setAttribute('role', 'menuitem');
+
+      let options = `<option value="${gdrive}">GDrive</option>`;
+      if (wallkpop) options += `<option value="${wallkpop}">Wallkpop</option>`;
+      if (metrolagu) options += `<option value="${metrolagu}">Metrolagu</option>`;
+
       customItem.innerHTML =
         '<div style="display: flex; align-items: center; padding: 4px 10px; gap: 6px;">' +
           '<span style="font-size: 12px;">Server</span>' +
-          '<select onchange="this.closest(\'.plyr\').querySelector(\'audio\').src = this.value" style="font-size: 12px; flex: 1;">' +
-            `<option value="${gdrive}">GDrive</option>` +
-            `<option value="${wallkpop}">Wallkpop</option>` +
-          '</select>' +
+          `<select onchange="this.closest('.plyr').querySelector('audio').src = this.value" style="font-size: 12px; flex: 1;">${options}</select>` +
         '</div>';
       menu.appendChild(customItem);
     }

@@ -1,3 +1,4 @@
+
 const audio = document.getElementById('player');
 const lyricsContainer = document.getElementById('lyrics');
 const debugContainer = document.getElementById('debug');
@@ -70,3 +71,32 @@ function testLyrics() {
     debugContainer.textContent = 'Test: No lyrics available';
   }
 }
+
+document.addEventListener("DOMContentLoaded", () => {
+  const players = document.querySelectorAll(".plyr");
+
+  players.forEach(wrapper => {
+    const el = wrapper.querySelector("audio");
+    const gdrive = el?.dataset.gdrive;
+    const wallkpop = el?.dataset.wallkpop;
+    const metrolagu = el?.dataset.metrolagu;
+
+    const menu = wrapper.querySelector('.plyr__menu__container [role="menu"]');
+    if (menu && gdrive && (wallkpop || metrolagu)) {
+      const customItem = document.createElement('div');
+      customItem.className = 'plyr__menu__item';
+      customItem.setAttribute('role', 'menuitem');
+
+      let options = `<option value="${gdrive}">GDrive</option>`;
+      if (wallkpop) options += `<option value="${wallkpop}">Wallkpop</option>`;
+      if (metrolagu) options += `<option value="${metrolagu}">Metrolagu</option>`;
+
+      customItem.innerHTML =
+        '<div style="display: flex; align-items: center; padding: 4px 10px; gap: 6px;">' +
+          '<span style="font-size: 12px;">Server</span>' +
+          `<select onchange="this.closest('.plyr').querySelector('audio').src = this.value" style="font-size: 12px; flex: 1;">${options}</select>` +
+        '</div>';
+      menu.appendChild(customItem);
+    }
+  });
+});

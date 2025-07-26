@@ -1,3 +1,46 @@
 {
-  "isi": []
+  "isi": [
+    {
+      "id": "4118",
+      "fileNames": "Kibun wa Stranger",
+      "artists": "Fukuji Sango (CV: Hazuki Tanda)",
+      "driveFileNames": "Fukuji Sango (CV: Hazuki Tanda) - Kibun wa Stranger [Theme Song ONSEN MUSUME PROJECT].mp3",
+      "albums": "ONSEN MUSUME PROJECT Theme Song",
+      "genres": "J-Pop",
+      "years": "2025",
+      "duration": "3:51",
+      "driveLink": "https://drive.google.com/file/d/14M28VSTpPNobP8afh-RPXYMGLOVEcdMy/view?usp=drivesdk",
+      "lyrics": "Lyrics Not Available (˚ ˃̣̣̥⌓˂̣̣̥ ), request on the metrolagu.wapkiz.mobi forum for mp3 files with lyrics or add them yourself, search for lyrics from Google (❀❛ ֊ ❛„)♡",
+      "coverUrl": "https://cdn.jsdelivr.net/gh/caraaink/meownime@679d2a98a20d986c9c2a2de2af4c5cb1b609e880/cover/j-pop/Fukuji_Sango_CV_Hazuki_Tanda_Kibun_wa_Stranger.jpg",
+      "bitrate_original": "320",
+      "url_original": "https://drive.google.com/file/d/14M28VSTpPNobP8afh-RPXYMGLOVEcdMy/view?usp=drivesdk",
+      "size_original": "9.2 MB",
+      "bitrate_320": "320",
+      "url_320": "https://drive.google.com/file/d/14M28VSTpPNobP8afh-RPXYMGLOVEcdMy/view?usp=drivesdk",
+      "size_320": "9.2 MB",
+      "driveFileNames_320": "Fukuji Sango (CV: Hazuki Tanda) - Kibun wa Stranger [Theme Song ONSEN MUSUME PROJECT].mp3",
+      "lyrics_timestamp": "Lyrics Not Available (˚ ˃̣̣̥⌓˂̣̣̥ ), request on the metrolagu.wapkiz.mobi forum for mp3 files with lyrics or add them yourself, search for lyrics from Google (❀❛ ֊ ❛„)♡"
+    },
+    {
+      "id": "4119",
+      "fileNames": "RYUU-SEN-KEI",
+      "artists": "Asanagi Obi (CV: Wakuno Aika)",
+      "driveFileNames": "Asanagi Obi (CV: Wakuno Aika) - RYUU-SEN-KEI [Theme Song DENONBU].mp3",
+      "albums": "DENONBU Theme Song",
+      "genres": "J-Pop",
+      "years": "2025",
+      "duration": "4:17",
+      "driveLink": "https://drive.google.com/file/d/1hLK8Bw_IyjakiG1nlaZVJtnve6EBXSZF/view?usp=drivesdk",
+      "lyrics": "Lyrics Not Available (˚ ˃̣̣̥⌓˂̣̣̥ ), request on the metrolagu.wapkiz.mobi forum for mp3 files with lyrics or add them yourself, search for lyrics from Google (❀❛ ֊ ❛„)♡",
+      "coverUrl": "https://cdn.jsdelivr.net/gh/caraaink/meownime@e9a2e35a91c6998313fc8ff63efa859cd03d7411/cover/j-pop/Asanagi_Obi_CV_Wakuno_Aika_RYUU_SEN_KEI.jpg",
+      "bitrate_original": "320",
+      "url_original": "https://drive.google.com/file/d/1hLK8Bw_IyjakiG1nlaZVJtnve6EBXSZF/view?usp=drivesdk",
+      "size_original": "10.1 MB",
+      "bitrate_320": "320",
+      "url_320": "https://drive.google.com/file/d/1hLK8Bw_IyjakiG1nlaZVJtnve6EBXSZF/view?usp=drivesdk",
+      "size_320": "10.1 MB",
+      "driveFileNames_320": "Asanagi Obi (CV: Wakuno Aika) - RYUU-SEN-KEI [Theme Song DENONBU].mp3",
+      "lyrics_timestamp": "Lyrics Not Available (˚ ˃̣̣̥⌓˂̣̣̥ ), request on the metrolagu.wapkiz.mobi forum for mp3 files with lyrics or add them yourself, search for lyrics from Google (❀❛ ֊ ❛„)♡"
+    }
+  ]
 }

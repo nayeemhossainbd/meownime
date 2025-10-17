@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
     return;
   }
 
-  debugContainer.textContent = 'Plyr initialized...';
+  debugContainer.textContent = 'Plyr initializing...';
 
   let isInitialized = false;
 
@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }).filter(line => line !== null);
   } else {
     console.warn('lyricsText not found — running without synced lyrics.');
-    if (debugContainer) debugContainer.textContent = 'No lyrics found — audio only mode';
+    debugContainer.textContent = 'No lyrics found — audio only mode';
   }
 
   let player;
@@ -47,6 +47,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const audioLoadPromise = new Promise((resolve, reject) => {
       audio.addEventListener('loadeddata', () => {
         isInitialized = true;
+        debugContainer.textContent = 'Audio loaded successfully';
         resolve();
       }, { once: true });
       audio.addEventListener('error', () => reject(new Error('Audio failed to load')), { once: true });
@@ -55,7 +56,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     try {
       await Promise.race([Promise.all([plyrPromise, audioLoadPromise]), timeoutPromise]);
-      debugContainer.textContent = 'Plyr initialized and audio loaded';
       console.log('Plyr initialized and audio loaded successfully');
     } catch (e) {
       debugContainer.textContent = 'Initialization failed: ' + e.message;
@@ -65,6 +65,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   initializePlyrWithTimeout();
 
+  // 🎵 Tambahkan menu server dengan event ganti server → tampil "Loading..."
   const players = document.querySelectorAll(".plyr");
   players.forEach(wrapper => {
     const el = wrapper.querySelector("audio");
@@ -87,23 +88,43 @@ document.addEventListener("DOMContentLoaded", () => {
       if (ilkpop) options += `<option value="${ilkpop}">Ilkpop</option>`;
 
       customItem.innerHTML =
-        '<div style="display: flex; align-items: center; padding: 4px 10px; gap: 6px;">' +
-          '<span style="font-size: 12px;">Server</span>' +
-          `<select onchange="this.closest('.plyr').querySelector('audio').src = this.value; this.closest('.plyr').querySelector('audio').load();" style="font-size: 12px; flex: 1;">${options}</select>` +
-        '</div>';
+        `<div style="display: flex; align-items: center; padding: 4px 10px; gap: 6px;">
+          <span style="font-size: 12px;">Server</span>
+          <select style="font-size: 12px; flex: 1;">
+            ${options}
+          </select>
+        </div>`;
       menu.appendChild(customItem);
+
+      // 🟡 Saat user ganti server
+      const selectEl = customItem.querySelector('select');
+      selectEl.addEventListener('change', (e) => {
+        const newSrc = e.target.value;
+        debugContainer.textContent = 'Loading new server...';
+        audio.src = newSrc;
+        audio.load();
+      });
     }
   });
 
+  // 🔄 Saat audio mulai memuat
+  audio.addEventListener('loadstart', () => {
+    debugContainer.textContent = 'Loading audio...';
+  });
+
+  // ✅ Saat audio siap
   audio.addEventListener('loadeddata', () => {
     debugContainer.textContent = 'Audio loaded successfully';
   });
 
+  // ❌ Kalau error
   audio.addEventListener('error', (e) => {
     isInitialized = false;
-    debugContainer.textContent = 'Audio failed to load: ' + e.message;
+    debugContainer.textContent = 'Audio failed to load';
+    console.error('Audio error:', e);
   });
 
+  // 🕒 Update lirik & waktu
   audio.addEventListener('timeupdate', () => {
     if (!isInitialized || lyrics.length === 0) {
       debugContainer.textContent = `Time: ${audio.currentTime.toFixed(2)}s`;
@@ -129,6 +150,7 @@ document.addEventListener("DOMContentLoaded", () => {
     debugContainer.textContent = `Time: ${currentTime.toFixed(2)}s`;
   });
 
+  // 🔚 Saat audio selesai
   audio.addEventListener('ended', () => {
     if (lyricsContainer) {
       lyricsContainer.textContent = '';
@@ -137,6 +159,7 @@ document.addEventListener("DOMContentLoaded", () => {
     debugContainer.textContent = 'Audio ended';
   });
 
+  // 🧪 Tes manual
   window.testLyrics = function() {
     if (lyrics.length > 0 && lyricsContainer) {
       lyricsContainer.textContent = lyrics[0].text;

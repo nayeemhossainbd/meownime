@@ -3,34 +3,37 @@ document.addEventListener("DOMContentLoaded", () => {
   const lyricsContainer = document.getElementById('lyrics');
   const debugContainer = document.getElementById('debug');
 
-  if (!audio || !lyricsContainer || !debugContainer) {
-    console.error('Required DOM elements not found');
-    if (debugContainer) debugContainer.textContent = 'Error: Required DOM elements not found';
+  if (!audio || !debugContainer) {
+    console.error('Required audio or debug elements not found');
+    if (debugContainer) debugContainer.textContent = 'Error: Audio or debug element missing';
     return;
   }
 
-  debugContainer.textContent = 'Plyr initialized...'; // Initial message
+  debugContainer.textContent = 'Plyr initializing...';
 
-  let isInitialized = false; // Track initialization status
+  let isInitialized = false;
 
-  const lyrics = lyricsText.split('<br>').map(line => {
-    const match = line.match(/\[(\d{2}):(\d{2}\.\d{2})\](.*)/);
-    if (match) {
-      const minutes = parseInt(match[1]);
-      const seconds = parseFloat(match[2]);
-      const time = minutes * 60 + seconds;
-      return { start: time, text: match[3].trim() };
-    }
-    return null;
-  }).filter(line => line !== null);
+  // ✅ Aman walau tidak ada script const lyricsText = ...
+  let lyrics = [];
+  if (typeof lyricsText !== 'undefined' && typeof lyricsText === 'string') {
+    lyrics = lyricsText.split('<br>').map(line => {
+      const match = line.match(/\[(\d{2}):(\d{2}\.\d{2})\](.*)/);
+      if (match) {
+        const minutes = parseInt(match[1]);
+        const seconds = parseFloat(match[2]);
+        const time = minutes * 60 + seconds;
+        return { start: time, text: match[3].trim() };
+      }
+      return null;
+    }).filter(line => line !== null);
+  } else {
+    console.warn('lyricsText not found — running without synced lyrics.');
+    debugContainer.textContent = 'No lyrics found — audio only mode';
+  }
 
   let player;
   const initializePlyrWithTimeout = async () => {
-    const timeoutPromise = new Promise((_, reject) => {
-      setTimeout(() => {
-        reject(new Error('timeout after 10 seconds'));
-      }, 10000);
-    });
+    const timeoutPromise = new Promise((_, reject) => setTimeout(() => reject(new Error('timeout after 10 seconds')), 10000));
 
     const plyrPromise = new Promise((resolve, reject) => {
       try {
@@ -43,7 +46,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const audioLoadPromise = new Promise((resolve, reject) => {
       audio.addEventListener('loadeddata', () => {
-        isInitialized = true; // Set flag on successful load
+        isInitialized = true;
+        debugContainer.textContent = 'Audio loaded successfully';
         resolve();
       }, { once: true });
       audio.addEventListener('error', () => reject(new Error('Audio failed to load')), { once: true });
@@ -51,26 +55,17 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     try {
-      await Promise.race([
-        Promise.all([plyrPromise, audioLoadPromise]),
-        timeoutPromise
-      ]);
-      debugContainer.textContent = 'Plyr initialized and audio loaded';
-      debugContainer.style.color = ''; // Reset color
+      await Promise.race([Promise.all([plyrPromise, audioLoadPromise]), timeoutPromise]);
       console.log('Plyr initialized and audio loaded successfully');
     } catch (e) {
-      if (e.message === 'timeout after 10 seconds') {
-        debugContainer.innerHTML = 'Initialization failed: <span style="color: red;">timeout</span> after 10 seconds';
-      } else {
-        debugContainer.textContent = 'Initialization failed: ' + e.message;
-        debugContainer.style.color = ''; // Reset color for other errors
-      }
+      debugContainer.textContent = 'Initialization failed: ' + e.message;
       console.error('Initialization error:', e);
     }
   };
 
   initializePlyrWithTimeout();
 
+  // 🎵 Tambahkan menu server dengan event ganti server → tampil "Loading..."
   const players = document.querySelectorAll(".plyr");
   players.forEach(wrapper => {
     const el = wrapper.querySelector("audio");
@@ -93,81 +88,90 @@ document.addEventListener("DOMContentLoaded", () => {
       if (ilkpop) options += `<option value="${ilkpop}">Ilkpop</option>`;
 
       customItem.innerHTML =
-        '<div style="display: flex; align-items: center; padding: 4px 10px; gap: 6px;">' +
-          '<span style="font-size: 12px;">Server</span>' +
-          `<select onchange="this.closest('.plyr').querySelector('audio').src = this.value; this.closest('.plyr').querySelector('audio').load();" style="font-size: 12px; flex: 1;">${options}</select>` +
-        '</div>';
+        `<div style="display: flex; align-items: center; padding: 4px 10px; gap: 6px;">
+          <span style="font-size: 12px;">Server</span>
+          <select style="font-size: 12px; flex: 1;">
+            ${options}
+          </select>
+        </div>`;
       menu.appendChild(customItem);
+
+      // 🟡 Saat user ganti server
+      const selectEl = customItem.querySelector('select');
+      selectEl.addEventListener('change', (e) => {
+        const newSrc = e.target.value;
+        debugContainer.textContent = 'Loading new server...';
+        audio.src = newSrc;
+        audio.load();
+      });
     }
   });
 
-  audio.addEventListener('loadeddata', () => {
-    debugContainer.textContent = 'Audio loaded successfully';
-    debugContainer.style.color = ''; // Reset color
-    console.log('Audio loaded');
+  // 🔄 Saat audio mulai memuat
+  audio.addEventListener('loadstart', () => {
+    debugContainer.textContent = 'Loading audio...';
   });
 
+  // ✅ Saat audio siap
+  audio.addEventListener('loadeddata', () => {
+    debugContainer.textContent = 'Audio loaded successfully';
+  });
+
+  // ❌ Kalau error
   audio.addEventListener('error', (e) => {
-    isInitialized = false; // Reset flag on error
-    debugContainer.textContent = 'Audio failed to load: ' + e.message;
-    debugContainer.style.color = ''; // Reset color
+    isInitialized = false;
+    debugContainer.textContent = 'Audio failed to load';
     console.error('Audio error:', e);
   });
 
+  // 🕒 Update lirik & waktu
   audio.addEventListener('timeupdate', () => {
-    if (!isInitialized) return; // Skip if initialization failed
+    if (!isInitialized || lyrics.length === 0) {
+      debugContainer.textContent = `Time: ${audio.currentTime.toFixed(2)}s`;
+      return;
+    }
+
     const currentTime = audio.currentTime;
     const currentLyric = lyrics.find(lyric =>
       currentTime >= lyric.start &&
       (lyrics[lyrics.indexOf(lyric) + 1] ? currentTime < lyrics[lyrics.indexOf(lyric) + 1].start : true)
     );
 
-    if (currentLyric) {
-      lyricsContainer.textContent = currentLyric.text;
-      lyricsContainer.classList.add('active');
-      debugContainer.textContent = `Time: ${currentTime.toFixed(2)}s`; // Show time when lyric is active
-      debugContainer.style.color = ''; // Reset color
-    } else {
-      lyricsContainer.textContent = '';
-      lyricsContainer.classList.remove('active');
-      if (lyrics.length > 0) {
-        debugContainer.textContent = 'Wait until the running lyrics appear'; // Show waiting message if lyrics exist
-        debugContainer.style.color = ''; // Reset color
+    if (lyricsContainer) {
+      if (currentLyric) {
+        lyricsContainer.textContent = currentLyric.text;
+        lyricsContainer.classList.add('active');
       } else {
-        debugContainer.textContent = `Time: ${currentTime.toFixed(2)}s, no running lyrics`; // Show time with no lyrics message
-        debugContainer.style.color = ''; // Reset color
+        lyricsContainer.textContent = '';
+        lyricsContainer.classList.remove('active');
       }
     }
+
+    debugContainer.textContent = `Time: ${currentTime.toFixed(2)}s`;
   });
 
+  // 🔚 Saat audio selesai
   audio.addEventListener('ended', () => {
-    if (!isInitialized) return; // Skip if initialization failed
-    lyricsContainer.textContent = '';
-    lyricsContainer.classList.remove('active');
+    if (lyricsContainer) {
+      lyricsContainer.textContent = '';
+      lyricsContainer.classList.remove('active');
+    }
     debugContainer.textContent = 'Audio ended';
-    debugContainer.style.color = ''; // Reset color
   });
 
+  // 🧪 Tes manual
   window.testLyrics = function() {
-    if (lyrics.length > 0) {
+    if (lyrics.length > 0 && lyricsContainer) {
       lyricsContainer.textContent = lyrics[0].text;
       lyricsContainer.classList.add('active');
       debugContainer.textContent = 'Test: Displaying first lyric';
-      debugContainer.style.color = ''; // Reset color
       setTimeout(() => {
         lyricsContainer.textContent = '';
         lyricsContainer.classList.remove('active');
-        if (lyrics.length > 0) {
-          debugContainer.textContent = 'Wait until the running lyrics appear'; // Show waiting message after test if lyrics exist
-          debugContainer.style.color = ''; // Reset color
-        } else {
-          debugContainer.textContent = 'Test: No running lyrics';
-          debugContainer.style.color = ''; // Reset color
-        }
+        debugContainer.textContent = 'Wait until the running lyrics appear';
       }, 2000);
     } else {
       debugContainer.textContent = 'Test: No running lyrics';
-      debugContainer.style.color = ''; // Reset color
     }
   };
 });

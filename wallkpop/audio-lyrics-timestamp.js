@@ -78,9 +78,10 @@ document.addEventListener("DOMContentLoaded", () => {
     const wallkpop = el?.dataset.wallkpop;
     const meownime = el?.dataset.meownime;
     const metrolagu = el?.dataset.metrolagu;
+    const ilkpop = el?.dataset.ilkpop;
 
     const menu = wrapper.querySelector('.plyr__menu__container [role="menu"]');
-    if (menu && gdrive && (wallkpop || meownime || metrolagu)) {
+    if (menu && gdrive && (wallkpop || meownime || metrolagu || ilkpop)) {
       const customItem = document.createElement('div');
       customItem.className = 'plyr__menu__item';
       customItem.setAttribute('role', 'menuitem');
@@ -89,6 +90,7 @@ document.addEventListener("DOMContentLoaded", () => {
       if (wallkpop) options += `<option value="${wallkpop}">Wallkpop</option>`;
       if (meownime) options += `<option value="${meownime}">Meownime</option>`;
       if (metrolagu) options += `<option value="${metrolagu}">Metrolagu</option>`;
+      if (ilkpop) options += `<option value="${ilkpop}">Ilkpop</option>`;
 
       customItem.innerHTML =
         '<div style="display: flex; align-items: center; padding: 4px 10px; gap: 6px;">' +

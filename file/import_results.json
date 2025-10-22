@@ -1,3 +1,46 @@
 {
-  "isi": []
+  "isi": [
+    {
+      "id": "1",
+      "fileNames": "Wo Ai Ni",
+      "artists": "Suiyoubi no Campanella",
+      "driveFileNames": "Suiyoubi no Campanella - Wo Ai Ni [Opening Ranma ½ (2024) 2nd Season].mp3",
+      "albums": "Ranma ½ (2024) 2nd Season OP",
+      "genres": "Anime",
+      "years": "2025",
+      "duration": "3:53",
+      "driveLink": "https://drive.google.com/file/d/1_0byyYa6Df6wRP8kMLWnWZm6__z_0Cpo/view?usp=drivesdk",
+      "lyrics": "Lyrics Not Available (˚ ˃̣̣̥⌓˂̣̣̥ ), request on the meownime.wapka.website forum for mp3 files with lyrics or add them yourself, search for lyrics from Google (❀❛ ֊ ❛„)♡",
+      "coverUrl": "https://cdn.jsdelivr.net/gh/caraaink/meownime@a2aec87b0b560733908bfaa2f8c666bfb8edcede/cover/anime/Suiyoubi_no_Campanella_Wo_Ai_Ni.jpg",
+      "bitrate_original": "320",
+      "url_original": "https://drive.google.com/file/d/1_0byyYa6Df6wRP8kMLWnWZm6__z_0Cpo/view?usp=drivesdk",
+      "size_original": "9.2 MB",
+      "bitrate_320": "320",
+      "url_320": "https://drive.google.com/file/d/1_0byyYa6Df6wRP8kMLWnWZm6__z_0Cpo/view?usp=drivesdk",
+      "size_320": "9.2 MB",
+      "driveFileNames_320": "Suiyoubi no Campanella - Wo Ai Ni [Opening Ranma ½ (2024) 2nd Season].mp3",
+      "lyrics_timestamp": "Lyrics Not Available (˚ ˃̣̣̥⌓˂̣̣̥ ), request on the meownime.wapka.website forum for mp3 files with lyrics or add them yourself, search for lyrics from Google (❀❛ ֊ ❛„)♡"
+    },
+    {
+      "id": "2",
+      "fileNames": "Monster",
+      "artists": "Da-iCE",
+      "driveFileNames": "Da-iCE - Monster [Opening Monster Strike: Deadverse Reloaded].mp3",
+      "albums": "Monster Strike: Deadverse Reloaded OP",
+      "genres": "Anime",
+      "years": "2025",
+      "duration": "3:09",
+      "driveLink": "https://drive.google.com/file/d/1qLnreO48img8SNL7cWEKjo_-ARE-63RL/view?usp=drivesdk",
+      "lyrics": "Lyrics Not Available (˚ ˃̣̣̥⌓˂̣̣̥ ), request on the meownime.wapka.website forum for mp3 files with lyrics or add them yourself, search for lyrics from Google (❀❛ ֊ ❛„)♡",
+      "coverUrl": "https://cdn.jsdelivr.net/gh/caraaink/meownime@b274bea3ceba3938919825b64ad188989aed9e4a/cover/anime/Da_iCE_Monster.jpg",
+      "bitrate_original": "320",
+      "url_original": "https://drive.google.com/file/d/1qLnreO48img8SNL7cWEKjo_-ARE-63RL/view?usp=drivesdk",
+      "size_original": "7.5 MB",
+      "bitrate_320": "320",
+      "url_320": "https://drive.google.com/file/d/1qLnreO48img8SNL7cWEKjo_-ARE-63RL/view?usp=drivesdk",
+      "size_320": "7.5 MB",
+      "driveFileNames_320": "Da-iCE - Monster [Opening Monster Strike: Deadverse Reloaded].mp3",
+      "lyrics_timestamp": "Lyrics Not Available (˚ ˃̣̣̥⌓˂̣̣̥ ), request on the meownime.wapka.website forum for mp3 files with lyrics or add them yourself, search for lyrics from Google (❀❛ ֊ ❛„)♡"
+    }
+  ]
 }

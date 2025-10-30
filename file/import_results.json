@@ -1,24 +1,24 @@
 {
   "isi": [
     {
-      "id": "1",
-      "fileNames": "DIAMOND in the ROUGH",
-      "artists": "VSPO!",
-      "driveFileNames": "VSPO! - DIAMOND in the ROUGH [Theme Song VSPO!].mp3",
-      "albums": "VSPO! Theme Song",
-      "genres": "VTuber",
+      "id": "2",
+      "fileNames": "Glitter",
+      "artists": "Takuma Terashima",
+      "driveFileNames": "Takuma Terashima - Glitter [Theme Song Tensei shitara Slime Datta Ken: Maou to Ryuu no Kenkoku-tan].mp3",
+      "albums": "Tensei shitara Slime Datta Ken: Maou to Ryuu no Kenkoku-tan Theme Song",
+      "genres": "Game",
       "years": "2025",
-      "duration": "4:23",
-      "driveLink": "https://drive.google.com/file/d/1OYdZ3jM3BjfNAUfsB3BLezEFcKWluvYK/view?usp=drivesdk",
+      "duration": "3:52",
+      "driveLink": "https://drive.google.com/file/d/1dk5iI-AF8x1VykFyZG8SJE86N-p9eNvU/view?usp=drivesdk",
       "lyrics": "Lyrics Not Available (˚ ˃̣̣̥⌓˂̣̣̥ ), request on the meownime.wapka.website forum for mp3 files with lyrics or add them yourself, search for lyrics from Google (❀❛ ֊ ❛„)♡",
-      "coverUrl": "https://cdn.jsdelivr.net/gh/caraaink/meownime@a089bf01fad9e1b63661d4af3a8bc73503c6a423/cover/vtuber/VSPO_DIAMOND_in_the_ROUGH.jpg",
+      "coverUrl": "https://cdn.jsdelivr.net/gh/caraaink/meownime@6bcef6a24965a6198a47784e895f632474df5841/cover/game/Takuma_Terashima_Glitter.jpg",
       "bitrate_original": "320",
-      "url_original": "https://drive.google.com/file/d/1OYdZ3jM3BjfNAUfsB3BLezEFcKWluvYK/view?usp=drivesdk",
-      "size_original": "11.7 MB",
+      "url_original": "https://drive.google.com/file/d/1dk5iI-AF8x1VykFyZG8SJE86N-p9eNvU/view?usp=drivesdk",
+      "size_original": "10.4 MB",
       "bitrate_320": "320",
-      "url_320": "https://drive.google.com/file/d/1OYdZ3jM3BjfNAUfsB3BLezEFcKWluvYK/view?usp=drivesdk",
-      "size_320": "11.7 MB",
-      "driveFileNames_320": "VSPO! - DIAMOND in the ROUGH [Theme Song VSPO!].mp3",
+      "url_320": "https://drive.google.com/file/d/1dk5iI-AF8x1VykFyZG8SJE86N-p9eNvU/view?usp=drivesdk",
+      "size_320": "10.4 MB",
+      "driveFileNames_320": "Takuma Terashima - Glitter [Theme Song Tensei shitara Slime Datta Ken: Maou to Ryuu no Kenkoku-tan].mp3",
       "lyrics_timestamp": "Lyrics Not Available (˚ ˃̣̣̥⌓˂̣̣̥ ), request on the meownime.wapka.website forum for mp3 files with lyrics or add them yourself, search for lyrics from Google (❀❛ ֊ ❛„)♡"
     }
   ]

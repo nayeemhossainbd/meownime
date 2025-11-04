@@ -1,25 +1,3 @@
 {
-  "isi": [
-    {
-      "id": "1",
-      "fileNames": "Heart Balance",
-      "artists": "Yukanyun",
-      "driveFileNames": "Yukanyun - Heart Balance [Theme Song Yoasobi Gurashi!].mp3",
-      "albums": "Yoasobi Gurashi! Theme Song",
-      "genres": "Anime",
-      "years": "2024",
-      "duration": "3:23",
-      "driveLink": "https://drive.google.com/file/d/1q5kybfRb0ivvLroYRanFsCbBpeK-yjUj/view?usp=drivesdk",
-      "lyrics": "Lyrics Not Available (˚ ˃̣̣̥⌓˂̣̣̥ ), request on the meownime.wapka.website forum for mp3 files with lyrics or add them yourself, search for lyrics from Google (❀❛ ֊ ❛„)♡",
-      "coverUrl": "https://cdn.jsdelivr.net/gh/caraaink/meownime@895b27d6c2e6ef35378b5244ebdf54dd80f9ac36/cover/anime/Yukanyun_Heart_Balance.jpg",
-      "bitrate_original": "320",
-      "url_original": "https://drive.google.com/file/d/1q5kybfRb0ivvLroYRanFsCbBpeK-yjUj/view?usp=drivesdk",
-      "size_original": "8.3 MB",
-      "bitrate_320": "320",
-      "url_320": "https://drive.google.com/file/d/1q5kybfRb0ivvLroYRanFsCbBpeK-yjUj/view?usp=drivesdk",
-      "size_320": "8.3 MB",
-      "driveFileNames_320": "Yukanyun - Heart Balance [Theme Song Yoasobi Gurashi!].mp3",
-      "lyrics_timestamp": "Lyrics Not Available (˚ ˃̣̣̥⌓˂̣̣̥ ), request on the meownime.wapka.website forum for mp3 files with lyrics or add them yourself, search for lyrics from Google (❀❛ ֊ ❛„)♡"
-    }
-  ]
+  "isi": []
 }

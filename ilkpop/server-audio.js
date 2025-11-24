@@ -9,6 +9,29 @@ document.addEventListener("DOMContentLoaded", () => {
     return;
   }
 
+  // --- AUTO FALLBACK SOURCE ---
+  (function setDefaultAudioSource() {
+    const ds = audio.dataset;
+
+    const fallback =
+      ds.src && ds.src.trim() !== "" ? ds.src :
+      ds.gdrive && ds.gdrive.trim() !== "" ? ds.gdrive :
+      ds.meownime && ds.meownime.trim() !== "" ? ds.meownime :
+      ds.wallkpop && ds.wallkpop.trim() !== "" ? ds.wallkpop :
+      ds.metrolagu && ds.metrolagu.trim() !== "" ? ds.metrolagu :
+      ds.ilkpop && ds.ilkpop.trim() !== "" ? ds.ilkpop :
+      "";
+
+    if (audio.getAttribute("src") === "" || !audio.getAttribute("src")) {
+      if (fallback !== "") {
+        audio.src = fallback;
+        console.log("Auto-fallback source dipakai:", fallback);
+      } else {
+        console.warn("Tidak ada sumber audio yang bisa dipakai.");
+      }
+    }
+  })();
+
   debugContainer.textContent = 'Plyr initializing...';
 
   let isInitialized = false;

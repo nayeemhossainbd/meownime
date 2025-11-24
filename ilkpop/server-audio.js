@@ -56,7 +56,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   let player;
   const initializePlyrWithTimeout = async () => {
-    const timeoutPromise = new Promise((_, reject) => setTimeout(() => reject(new Error('timeout after 10 seconds')), 10000));
+    const timeoutPromise = new Promise((_, reject) => setTimeout(() => reject(new Error('timeout after 30 seconds')), 30000));
 
     const plyrPromise = new Promise((resolve, reject) => {
       try {

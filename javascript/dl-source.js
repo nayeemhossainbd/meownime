@@ -15,28 +15,30 @@ document.addEventListener("DOMContentLoaded", function() {
   });
 
   const sourceList = document.getElementById("source-list");
-  if (availableSources.length <= 1 && sourceList) {
-    sourceList.style.display = "none";
-  } else if (sourceList) {
+
+  // tampilkan source list hanya jika >1 sumber
+  if (availableSources.length > 1 && sourceList) {
     sourceList.style.display = "flex";
-    setTimeout(() => sourceList.style.opacity = 1, 50); // fade-in
+    setTimeout(() => sourceList.style.opacity = 1, 50);
   }
 
-  // tampilkan blok download dari sumber pertama yang tersedia
+  // tampilkan blok download pertama yang ada
   if (availableSources.length > 0) {
     const firstSource = availableSources[0];
     const block = document.getElementById("dl-" + firstSource);
     if (block) {
       block.style.display = "block";
-      setTimeout(() => block.style.opacity = 1, 50); // fade-in
+      setTimeout(() => block.style.opacity = 1, 50);
     }
   }
 });
 
 function showDownload(source) {
   const blocks = document.querySelectorAll('.host');
-  blocks.forEach(b => b.style.display = 'none'); 
-  blocks.forEach(b => b.style.opacity = 0);
+  blocks.forEach(b => {
+    b.style.opacity = 0;
+    b.style.display = 'none';
+  });
 
   const block = document.getElementById("dl-" + source);
   if (block) {

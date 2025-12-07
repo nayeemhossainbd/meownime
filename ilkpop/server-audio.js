@@ -36,7 +36,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   let isInitialized = false;
 
-  // ✅ Aman walau tidak ada script const lyricsText = ...
   let lyrics = [];
   if (typeof lyricsText !== 'undefined' && typeof lyricsText === 'string') {
     lyrics = lyricsText.split('<br>').map(line => {
@@ -56,7 +55,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   let player;
   const initializePlyrWithTimeout = async () => {
-    const timeoutPromise = new Promise((_, reject) => setTimeout(() => reject(new Error('timeout after 30 seconds')), 30000));
+    const timeoutPromise = new Promise((_, reject) => setTimeout(() => reject(new Error('timeout after 15 seconds')), 15000));
 
     const plyrPromise = new Promise((resolve, reject) => {
       try {

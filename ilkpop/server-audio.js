@@ -87,7 +87,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   initializePlyrWithTimeout();
 
-  // 🎵 Tambahkan menu server dengan event ganti server → tampil "Loading..."
   const players = document.querySelectorAll(".plyr");
   players.forEach(wrapper => {
     const el = wrapper.querySelector("audio");
@@ -118,7 +117,6 @@ document.addEventListener("DOMContentLoaded", () => {
         </div>`;
       menu.appendChild(customItem);
 
-      // 🟡 Saat user ganti server
       const selectEl = customItem.querySelector('select');
       selectEl.addEventListener('change', (e) => {
         const newSrc = e.target.value;
@@ -129,24 +127,20 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  // 🔄 Saat audio mulai memuat
   audio.addEventListener('loadstart', () => {
     debugContainer.textContent = 'Loading audio...';
   });
 
-  // ✅ Saat audio siap
   audio.addEventListener('loadeddata', () => {
     debugContainer.textContent = 'Audio loaded successfully';
   });
 
-  // ❌ Kalau error
   audio.addEventListener('error', (e) => {
     isInitialized = false;
     debugContainer.textContent = 'Audio failed to load';
     console.error('Audio error:', e);
   });
 
-  // 🕒 Update lirik & waktu
   audio.addEventListener('timeupdate', () => {
     if (!isInitialized || lyrics.length === 0) {
       debugContainer.textContent = `Time: ${audio.currentTime.toFixed(2)}s`;
@@ -172,7 +166,6 @@ document.addEventListener("DOMContentLoaded", () => {
     debugContainer.textContent = `Time: ${currentTime.toFixed(2)}s`;
   });
 
-  // 🔚 Saat audio selesai
   audio.addEventListener('ended', () => {
     if (lyricsContainer) {
       lyricsContainer.textContent = '';
@@ -181,7 +174,6 @@ document.addEventListener("DOMContentLoaded", () => {
     debugContainer.textContent = 'Audio ended';
   });
 
-  // 🧪 Tes manual
   window.testLyrics = function() {
     if (lyrics.length > 0 && lyricsContainer) {
       lyricsContainer.textContent = lyrics[0].text;

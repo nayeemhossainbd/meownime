@@ -9,11 +9,33 @@ document.addEventListener("DOMContentLoaded", () => {
     return;
   }
 
+  // --- AUTO FALLBACK SOURCE ---
+  (function setDefaultAudioSource() {
+    const ds = audio.dataset;
+
+    const fallback =
+      ds.src && ds.src.trim() !== "" ? ds.src :
+      ds.gdrive && ds.gdrive.trim() !== "" ? ds.gdrive :
+      ds.meownime && ds.meownime.trim() !== "" ? ds.meownime :
+      ds.wallkpop && ds.wallkpop.trim() !== "" ? ds.wallkpop :
+      ds.metrolagu && ds.metrolagu.trim() !== "" ? ds.metrolagu :
+      ds.ilkpop && ds.ilkpop.trim() !== "" ? ds.ilkpop :
+      "";
+
+    if (audio.getAttribute("src") === "" || !audio.getAttribute("src")) {
+      if (fallback !== "") {
+        audio.src = fallback;
+        console.log("Auto-fallback source dipakai:", fallback);
+      } else {
+        console.warn("Tidak ada sumber audio yang bisa dipakai.");
+      }
+    }
+  })();
+
   debugContainer.textContent = 'Plyr initializing...';
 
   let isInitialized = false;
 
-  // ✅ Aman walau tidak ada script const lyricsText = ...
   let lyrics = [];
   if (typeof lyricsText !== 'undefined' && typeof lyricsText === 'string') {
     lyrics = lyricsText.split('<br>').map(line => {
@@ -33,7 +55,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   let player;
   const initializePlyrWithTimeout = async () => {
-    const timeoutPromise = new Promise((_, reject) => setTimeout(() => reject(new Error('timeout after 10 seconds')), 10000));
+    const timeoutPromise = new Promise((_, reject) => setTimeout(() => reject(new Error('timeout after 15 seconds')), 15000));
 
     const plyrPromise = new Promise((resolve, reject) => {
       try {
@@ -65,7 +87,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   initializePlyrWithTimeout();
 
-  // 🎵 Tambahkan menu server dengan event ganti server → tampil "Loading..."
   const players = document.querySelectorAll(".plyr");
   players.forEach(wrapper => {
     const el = wrapper.querySelector("audio");
@@ -96,7 +117,6 @@ document.addEventListener("DOMContentLoaded", () => {
         </div>`;
       menu.appendChild(customItem);
 
-      // 🟡 Saat user ganti server
       const selectEl = customItem.querySelector('select');
       selectEl.addEventListener('change', (e) => {
         const newSrc = e.target.value;
@@ -107,24 +127,20 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  // 🔄 Saat audio mulai memuat
   audio.addEventListener('loadstart', () => {
     debugContainer.textContent = 'Loading audio...';
   });
 
-  // ✅ Saat audio siap
   audio.addEventListener('loadeddata', () => {
     debugContainer.textContent = 'Audio loaded successfully';
   });
 
-  // ❌ Kalau error
   audio.addEventListener('error', (e) => {
     isInitialized = false;
     debugContainer.textContent = 'Audio failed to load';
     console.error('Audio error:', e);
   });
 
-  // 🕒 Update lirik & waktu
   audio.addEventListener('timeupdate', () => {
     if (!isInitialized || lyrics.length === 0) {
       debugContainer.textContent = `Time: ${audio.currentTime.toFixed(2)}s`;
@@ -150,7 +166,6 @@ document.addEventListener("DOMContentLoaded", () => {
     debugContainer.textContent = `Time: ${currentTime.toFixed(2)}s`;
   });
 
-  // 🔚 Saat audio selesai
   audio.addEventListener('ended', () => {
     if (lyricsContainer) {
       lyricsContainer.textContent = '';
@@ -159,7 +174,6 @@ document.addEventListener("DOMContentLoaded", () => {
     debugContainer.textContent = 'Audio ended';
   });
 
-  // 🧪 Tes manual
   window.testLyrics = function() {
     if (lyrics.length > 0 && lyricsContainer) {
       lyricsContainer.textContent = lyrics[0].text;

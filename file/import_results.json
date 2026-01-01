@@ -1,25 +1,3 @@
 {
-  "isi": [
-    {
-      "id": "3",
-      "fileNames": "Crystallize",
-      "artists": "Setono Toto",
-      "driveFileNames": "Setono Toto - Crystallize.mp3",
-      "albums": "Crystallize",
-      "genres": "J-Pop",
-      "years": "2025",
-      "duration": "4:00",
-      "driveLink": "https://drive.google.com/file/d/1CXGphq-Pfo7vFhxrHuoZtDnmMb9vm9Rs/view?usp=drivesdk",
-      "lyrics": "Lyrics Not Available (˚ ˃̣̣̥⌓˂̣̣̥ ), request on the ilkpop.wapzim.com forum for mp3 files with lyrics or add them yourself, search for lyrics from Google (❀❛ ֊ ❛„)♡",
-      "coverUrl": "https://cdn.jsdelivr.net/gh/caraaink/meownime@8341285472abfc089e9541778d8aa22f879364d5/cover/j-pop/Setono_Toto_Crystallize.jpg",
-      "bitrate_original": "320",
-      "url_original": "https://drive.google.com/file/d/1CXGphq-Pfo7vFhxrHuoZtDnmMb9vm9Rs/view?usp=drivesdk",
-      "size_original": "9.6 MB",
-      "bitrate_320": "320",
-      "url_320": "https://drive.google.com/file/d/1CXGphq-Pfo7vFhxrHuoZtDnmMb9vm9Rs/view?usp=drivesdk",
-      "size_320": "9.6 MB",
-      "driveFileNames_320": "Setono Toto - Crystallize.mp3",
-      "lyrics_timestamp": "Lyrics Not Available (˚ ˃̣̣̥⌓˂̣̣̥ ), request on the ilkpop.wapzim.com forum for mp3 files with lyrics or add them yourself, search for lyrics from Google (❀❛ ֊ ❛„)♡"
-    }
-  ]
+  "isi": []
 }

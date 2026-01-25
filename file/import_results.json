@@ -1,25 +1,3 @@
 {
-  "isi": [
-    {
-      "id": "1",
-      "fileNames": "ResoNAnce",
-      "artists": "ARAKI",
-      "driveFileNames": "ARAKI - ResoNAnce [Opening 9: Ruler's Crown].mp3",
-      "albums": "9: Ruler's Crown OP",
-      "genres": "Anime",
-      "years": "2025",
-      "duration": "3:22",
-      "driveLink": "https://drive.google.com/file/d/1KRWKWYVW3ZrC4QZkS-O9UM0g4I9bNNFs/view?usp=drivesdk",
-      "lyrics": "Lyrics Not Available (˚ ˃̣̣̥⌓˂̣̣̥ ), request on the ilkpop.wapzim.com forum for mp3 files with lyrics or add them yourself, search for lyrics from Google (❀❛ ֊ ❛„)♡",
-      "coverUrl": "https://cdn.jsdelivr.net/gh/caraaink/meownime@3c2f1441bd81e35451e01f98aabf46f4e3a3978f/cover/anime/ARAKI_ResoNAnce.jpg",
-      "bitrate_original": "320",
-      "url_original": "https://drive.google.com/file/d/1KRWKWYVW3ZrC4QZkS-O9UM0g4I9bNNFs/view?usp=drivesdk",
-      "size_original": "8.4 MB",
-      "bitrate_320": "320",
-      "url_320": "https://drive.google.com/file/d/1KRWKWYVW3ZrC4QZkS-O9UM0g4I9bNNFs/view?usp=drivesdk",
-      "size_320": "8.4 MB",
-      "driveFileNames_320": "ARAKI - ResoNAnce [Opening 9: Ruler's Crown].mp3",
-      "lyrics_timestamp": "Lyrics Not Available (˚ ˃̣̣̥⌓˂̣̣̥ ), request on the ilkpop.wapzim.com forum for mp3 files with lyrics or add them yourself, search for lyrics from Google (❀❛ ֊ ❛„)♡"
-    }
-  ]
+  "isi": []
 }

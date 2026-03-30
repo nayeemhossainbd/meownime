@@ -2,23 +2,31 @@
   "isi": [
     {
       "id": "",
-      "fileNames": "",
-      "artists": "",
-      "driveFileNames": "¬Ersterbend.mp3",
-      "albums": "Opening Shibou Yuugi de Meshi wo Kuu.",
+      "fileNames": "¬Ersterbend",
+      "artists": "LIN (MADKID)",
+      "driveFileNames": "LIN (MADKID) - ¬Ersterbend [Opening Yuugi de Meshi wo Kuu.].mp3",
+      "albums": "Shibou Yuugi de Meshi wo Kuu. OP",
       "genres": "Anime",
-      "years": "",
+      "years": "2026",
       "duration": "",
-      "driveLink": "https://drive.google.com/file/d/1vVyS9-TA4YjOQ-nQ3w1x7NS3Vp2OGU8w/view?usp=drivesdk",
+      "driveLink": "https://drive.google.com/file/d/1bL3gD4EcVctTeNa74RWfzOBNibtsIQ1Z/view?usp=drivesdk",
       "lyrics": "Lyrics Not Available, request on the ilkpop.wapzim.com forum for mp3 files with lyrics or add them yourself, search for lyrics from Google",
-      "coverUrl": "",
+      "coverUrl": "https://cdn.jsdelivr.net/gh/caraaink/meownime@547b700970ae4504b485f76eff25f06e60bff155/cover/anime/LIN_MADKID_Ersterbend.jpg",
       "bitrate_original": "320",
-      "url_original": "https://drive.google.com/file/d/1vVyS9-TA4YjOQ-nQ3w1x7NS3Vp2OGU8w/view?usp=drivesdk",
-      "size_original": "3.7 MB",
+      "url_original": "https://drive.google.com/file/d/1bL3gD4EcVctTeNa74RWfzOBNibtsIQ1Z/view?usp=drivesdk",
+      "size_original": "3.8 MB",
       "bitrate_320": "320",
-      "url_320": "https://drive.google.com/file/d/1vVyS9-TA4YjOQ-nQ3w1x7NS3Vp2OGU8w/view?usp=drivesdk",
-      "size_320": "3.7 MB",
-      "driveFileNames_320": "¬Ersterbend.mp3"
+      "url_320": "https://drive.google.com/file/d/1bL3gD4EcVctTeNa74RWfzOBNibtsIQ1Z/view?usp=drivesdk",
+      "size_320": "3.8 MB",
+      "driveFileNames_320": "LIN (MADKID) - ¬Ersterbend [Opening Yuugi de Meshi wo Kuu.]-[320k].mp3",
+      "bitrate_192": "192",
+      "url_192": "https://drive.google.com/file/d/1Rcw2lZHZ9MkHHr7A6QZXVPWtlJqPCqJE/view?usp=drivesdk",
+      "size_192": "2.3 MB",
+      "driveFileNames_192": "LIN (MADKID) - ¬Ersterbend [Opening Yuugi de Meshi wo Kuu.]-[192k].mp3",
+      "bitrate_128": "128",
+      "url_128": "https://drive.google.com/file/d/1pmRz86Ft8-0-mkNLke5R-mJBUJyDweF5/view?usp=drivesdk",
+      "size_128": "1.6 MB",
+      "driveFileNames_128": "LIN (MADKID) - ¬Ersterbend [Opening Yuugi de Meshi wo Kuu.]-[128k].mp3"
     }
   ]
 }

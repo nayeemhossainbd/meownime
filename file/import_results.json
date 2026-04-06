@@ -1,33 +1,3 @@
 {
-  "isi": [
-    {
-      "id": "3",
-      "fileNames": "HEARTLOUD",
-      "artists": "Kis-My-Ft2",
-      "driveFileNames": "Kis-My-Ft2 - HEARTLOUD [Opening Mao].mp3",
-      "albums": "Mao OP",
-      "genres": "Anime",
-      "years": "2026",
-      "duration": "3:23",
-      "driveLink": "https://drive.google.com/file/d/1VD2AA_7s_ZDTy49HPL1mh48j3IbDMYhF/view?usp=drivesdk",
-      "lyrics": "Lyrics Not Available (˚ ˃̣̣̥⌓˂̣̣̥ ), request on the meownime.wapka.website forum for mp3 files with lyrics or add them yourself (❀❛ ֊ ❛„)♡",
-      "coverUrl": "https://cdn.jsdelivr.net/gh/caraaink/meownime@e410bb94d8d6409ecd4dba623a47fffd89bed8bd/cover/anime/Kis_My_Ft2_HEARTLOUD.jpg",
-      "bitrate_original": "320",
-      "url_original": "https://drive.google.com/file/d/1VD2AA_7s_ZDTy49HPL1mh48j3IbDMYhF/view?usp=drivesdk",
-      "size_original": "8.8 MB",
-      "bitrate_320": "320",
-      "url_320": "https://drive.google.com/file/d/1VD2AA_7s_ZDTy49HPL1mh48j3IbDMYhF/view?usp=drivesdk",
-      "size_320": "8.8 MB",
-      "driveFileNames_320": "Kis-My-Ft2 - HEARTLOUD [Opening Mao]-[320k].mp3",
-      "bitrate_192": "192",
-      "url_192": "https://drive.google.com/file/d/1JkGe7P-QScOr7SAAMy0wT447iz4lGmke/view?usp=drivesdk",
-      "size_192": "4.8 MB",
-      "driveFileNames_192": "Kis-My-Ft2 - HEARTLOUD [Opening Mao]-[192k].mp3",
-      "bitrate_128": "128",
-      "url_128": "https://drive.google.com/file/d/1VmFX1t0DNSCyrz88gLOW9yWDL1pg5qnA/view?usp=drivesdk",
-      "size_128": "3.2 MB",
-      "driveFileNames_128": "Kis-My-Ft2 - HEARTLOUD [Opening Mao]-[128k].mp3",
-      "lyrics_timestamp": "Lyrics Not Available (˚ ˃̣̣̥⌓˂̣̣̥ ), request on the meownime.wapka.website forum for mp3 files with lyrics or add them yourself (❀❛ ֊ ❛„)♡"
-    }
-  ]
+  "isi": []
 }

@@ -1,25 +1,3 @@
 {
-  "isi": [
-    {
-      "id": "4",
-      "fileNames": "Juai",
-      "artists": "TRUE",
-      "driveFileNames": "TRUE - Juai [Ending Mao].mp3",
-      "albums": "Mao ED",
-      "genres": "Anime",
-      "years": "2026",
-      "duration": "4:22",
-      "driveLink": "https://drive.google.com/file/d/1WV8PA_fjev4RR2nYD4uLn_4GxPwgY8WN/view?usp=drivesdk",
-      "lyrics": "Lyrics Not Available (˚ ˃̣̣̥⌓˂̣̣̥ ), request on the meownime.wapka.website forum for mp3 files with lyrics or add them yourself (❀❛ ֊ ❛„)♡",
-      "coverUrl": "https://cdn.jsdelivr.net/gh/caraaink/meownime@c782bb044006db19b82cd6f8176ee52ef2b961e6/cover/anime/TRUE_Juai.jpg",
-      "bitrate_original": "320",
-      "url_original": "https://drive.google.com/file/d/1WV8PA_fjev4RR2nYD4uLn_4GxPwgY8WN/view?usp=drivesdk",
-      "size_original": "10.7 MB",
-      "bitrate_320": "320",
-      "url_320": "https://drive.google.com/file/d/1WV8PA_fjev4RR2nYD4uLn_4GxPwgY8WN/view?usp=drivesdk",
-      "size_320": "10.7 MB",
-      "driveFileNames_320": "TRUE - Juai [Ending Mao].mp3",
-      "lyrics_timestamp": "Lyrics Not Available (˚ ˃̣̣̥⌓˂̣̣̥ ), request on the meownime.wapka.website forum for mp3 files with lyrics or add them yourself (❀❛ ֊ ❛„)♡"
-    }
-  ]
+  "isi": []
 }

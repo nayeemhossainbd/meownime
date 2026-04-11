@@ -1,3 +1,33 @@
 {
-  "isi": []
+  "isi": [
+    {
+      "id": "3",
+      "fileNames": "Kanjou Glass",
+      "artists": "Botan Kamiina (CV: Sayumi Suzushiro)",
+      "driveFileNames": "Botan Kamiina (CV: Sayumi Suzushiro) - Kanjou Glass [Ending Kamiina Botan, Yoeru Sugata wa Yuri no Hana].mp3",
+      "albums": "Kamiina Botan, Yoeru Sugata wa Yuri no Hana ED",
+      "genres": "Anime",
+      "years": "2026",
+      "duration": "4:00",
+      "driveLink": "https://drive.google.com/file/d/1QOE0LhnGkTBecniDOe8tSnWTIp2pptOS/view?usp=drivesdk",
+      "lyrics": "Lyrics Not Available (˚ ˃̣̣̥⌓˂̣̣̥ ), request on the meownime.wapka.website forum for mp3 files with lyrics or add them yourself (❀❛ ֊ ❛„)♡",
+      "coverUrl": "https://cdn.jsdelivr.net/gh/caraaink/meownime@6f7cf81b6e7301135f7af659c5c600259ac1aafd/cover/anime/Botan_Kamiina_CV_Sayumi_Suzushiro_Kanjou_Glass.jpg",
+      "bitrate_original": "320",
+      "url_original": "https://drive.google.com/file/d/1QOE0LhnGkTBecniDOe8tSnWTIp2pptOS/view?usp=drivesdk",
+      "size_original": "10.5 MB",
+      "bitrate_320": "320",
+      "url_320": "https://drive.google.com/file/d/1QOE0LhnGkTBecniDOe8tSnWTIp2pptOS/view?usp=drivesdk",
+      "size_320": "10.5 MB",
+      "driveFileNames_320": "Botan Kamiina (CV: Sayumi Suzushiro) - Kanjou Glass [Ending Kamiina Botan, Yoeru Sugata wa Yuri no Hana]-[320k].mp3",
+      "bitrate_192": "192",
+      "url_192": "https://drive.google.com/file/d/1_ip8HktZXE3Wv8zKpuoIRrn4xe6FIBin/view?usp=drivesdk",
+      "size_192": "5.8 MB",
+      "driveFileNames_192": "Botan Kamiina (CV: Sayumi Suzushiro) - Kanjou Glass [Ending Kamiina Botan, Yoeru Sugata wa Yuri no Hana]-[192k].mp3",
+      "bitrate_128": "128",
+      "url_128": "https://drive.google.com/file/d/1yx2XqEyD1NgO1cbFpd8wbUwHG42ZPvia/view?usp=drivesdk",
+      "size_128": "3.9 MB",
+      "driveFileNames_128": "Botan Kamiina (CV: Sayumi Suzushiro) - Kanjou Glass [Ending Kamiina Botan, Yoeru Sugata wa Yuri no Hana]-[128k].mp3",
+      "lyrics_timestamp": "Lyrics Not Available (˚ ˃̣̣̥⌓˂̣̣̥ ), request on the meownime.wapka.website forum for mp3 files with lyrics or add them yourself (❀❛ ֊ ❛„)♡"
+    }
+  ]
 }

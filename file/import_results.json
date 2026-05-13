@@ -1,25 +1,3 @@
 {
-  "isi": [
-    {
-      "id": "1",
-      "fileNames": "Journey to Exoplanet X",
-      "artists": "Mugendai Mewtype",
-      "driveFileNames": "Mugendai Mewtype - Journey to Exoplanet X [Theme Song BanG Dream!].mp3",
-      "albums": "BanG Dream! Theme Song",
-      "genres": "Game",
-      "years": "2026",
-      "duration": "2:54",
-      "driveLink": "https://drive.google.com/file/d/1cwiFnhq3VGLeazVl6O2hYu0nhoSZ9Vqe/view?usp=drivesdk",
-      "lyrics": "Lyrics Not Available (˚ ˃̣̣̥⌓˂̣̣̥ ), request on the meownime.net forum for mp3 files with lyrics or add them yourself (❀❛ ֊ ❛„)♡",
-      "coverUrl": "https://cdn.jsdelivr.net/gh/caraaink/meownime@803bbfa70a173de492bbb6e3e28ccece19aa9eb5/cover/game/Mugendai_Mewtype_Journey_to_Exoplanet_X.jpg",
-      "bitrate_original": "320",
-      "url_original": "https://drive.google.com/file/d/1cwiFnhq3VGLeazVl6O2hYu0nhoSZ9Vqe/view?usp=drivesdk",
-      "size_original": "8.0 MB",
-      "bitrate_320": "320",
-      "url_320": "https://drive.google.com/file/d/1cwiFnhq3VGLeazVl6O2hYu0nhoSZ9Vqe/view?usp=drivesdk",
-      "size_320": "8.0 MB",
-      "driveFileNames_320": "Mugendai Mewtype - Journey to Exoplanet X [Theme Song BanG Dream!].mp3",
-      "lyrics_timestamp": "Lyrics Not Available (˚ ˃̣̣̥⌓˂̣̣̥ ), request on the meownime.net forum for mp3 files with lyrics or add them yourself (❀❛ ֊ ❛„)♡"
-    }
-  ]
+  "isi": []
 }

@@ -1,1 +1,1 @@
-# isinya hanya file gabut 🗿
+# The content is just a useless/empty file 🗿
